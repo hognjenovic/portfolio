@@ -51,9 +51,7 @@
 
     .demo { margin-bottom: var(--space-48); }
     .demo__label { display: block; margin-bottom: var(--space-12); color: var(--color-ink-soft); line-height: 1.5; }
-    .works__items.demo--cards[data-view="grid"] { grid-template-columns: repeat(3, 1fr); max-width: 720px; }
-    .demo--onprimary { padding: var(--space-30); border-radius: var(--radius-lg); background: var(--color-primary); color: var(--color-on-primary); }
-    .demo--onprimary .footer__contact { padding: 0; }
+    .demo--onprimary { padding: var(--space-30); border-radius: var(--radius-lg); background: var(--color-hero); color: var(--color-on-primary); }
 
     @media (max-width: 560px) {
       .scale li { grid-template-columns: 110px 1fr; }
@@ -85,10 +83,10 @@
     <section class="block" id="colour">
       <h2 class="block__label">Colour</h2>
       <div>
-        <p class="sg-note">One saturated blue does all the brand work: headlines, labels, solid tiles and the footer. Everything else is white, near-black and two greys.</p>
+        <p class="sg-note">One saturated blue does all the brand work: headlines, labels, solid tiles and hover states. Everything else is white, near-black and two greys.</p>
         <ul class="swatches">
-          <li><div class="swatch__chip" style="background: var(--color-primary)"></div><div class="swatch__meta"><span class="swatch__name">Primary · #000BAB</span><code>--color-primary</code><span class="swatch__use">Headlines, labels, solid tiles, footer</span></div></li>
-          <li><div class="swatch__chip" style="background: var(--color-hero)"></div><div class="swatch__meta"><span class="swatch__name">Hero · #1B1FD2</span><code>--color-hero</code><span class="swatch__use">Hero background</span></div></li>
+          <li><div class="swatch__chip" style="background: var(--color-primary)"></div><div class="swatch__meta"><span class="swatch__name">Primary · #000BAB</span><code>--color-primary</code><span class="swatch__use">Headlines, labels, solid tiles, row hover</span></div></li>
+          <li><div class="swatch__chip" style="background: var(--color-hero)"></div><div class="swatch__meta"><span class="swatch__name">Hero · #1B1FD2</span><code>--color-hero</code><span class="swatch__use">Hero and footer background</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-hero-shade)"></div><div class="swatch__meta"><span class="swatch__name">Hero shade · #14145F</span><code>--color-hero-shade</code><span class="swatch__use">Dark shapes in the hero</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-primary-tint)"></div><div class="swatch__meta"><span class="swatch__name">Primary tint · #F5F5FF</span><code>--color-primary-tint</code><span class="swatch__use">Tile backgrounds</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-ink)"></div><div class="swatch__meta"><span class="swatch__name">Ink · #0A0A0A</span><code>--color-ink</code><span class="swatch__use">Body text, titles</span></div></li>
@@ -105,26 +103,26 @@
     <section class="block" id="type">
       <h2 class="block__label">Typography</h2>
       <div>
-        <p class="sg-note">One family, Stack Sans Text, in five weights. Headings are set tight (negative letter-spacing, short line-height); sizes shrink fluidly from desktop to phone.</p>
+        <p class="sg-note">One family, Stack Sans Text, in five weights. Headings are set tight (negative letter-spacing, short line-height); sizes step down at the tablet (1199px) and phone (809px) breakpoints.</p>
 
         <div class="specimen">
           <div class="specimen__meta"><b>Display</b><span>scaled to fit · 600 hero / 700 footer · tracking −7%</span></div>
           <p class="t-display">Display</p>
         </div>
         <div class="specimen">
-          <div class="specimen__meta"><b>Heading 1</b><span>56 → 30px · 600 · line 1.1 · tracking −5%</span><code>--text-h1</code></div>
+          <div class="specimen__meta"><b>Heading 1</b><span>56 / 36 / 30px · 600 · line 1.1 · tracking −5%</span><code>--text-h1</code></div>
           <p class="t-h1">Combining strategy and design to build things worth remembering.</p>
         </div>
         <div class="specimen">
-          <div class="specimen__meta"><b>Heading 2</b><span>48 → 30px · 400 · line 1.2 · tracking −5%</span><code>--text-h2</code></div>
+          <div class="specimen__meta"><b>Heading 2</b><span>48 / 36 / 30px · 400 · line 1.2 · tracking −5%</span><code>--text-h2</code></div>
           <p class="t-h2">A lighter statement for secondary headlines and contact details.</p>
         </div>
         <div class="specimen">
-          <div class="specimen__meta"><b>Heading 3</b><span>36 → 24px · 400 · line 1.2 · tracking −5%</span><code>--text-h3</code></div>
+          <div class="specimen__meta"><b>Heading 3</b><span>36 / 32 / 24px · 400 · line 1.2 · tracking −5%</span><code>--text-h3</code></div>
           <p class="t-h3">Selected Works</p>
         </div>
         <div class="specimen">
-          <div class="specimen__meta"><b>Tile</b><span>20 → 14px · 500 · line 1.6 · tracking −2%</span><code>--text-tile</code></div>
+          <div class="specimen__meta"><b>Tile</b><span>20 / 18 / 14px · 500 · line 1.6 · tracking −2%</span><code>--text-tile</code></div>
           <p class="t-tile">Visual Identity Systems</p>
         </div>
         <div class="specimen">
@@ -187,11 +185,11 @@
       <h2 class="block__label">Layout</h2>
       <div>
         <ul class="records">
-          <li><span class="records__name">Page gutter</span><span class="records__for">48px desktop → 16px phone</span><span class="records__year"><code>--gutter</code></span></li>
-          <li><span class="records__name">Section gap</span><span class="records__for">120px desktop → 64px phone</span><span class="records__year"><code>--section-gap</code></span></li>
-          <li><span class="records__name">Content columns</span><span class="records__for">Label ⅓ · content ⅔, stacked below 900px</span><span class="records__year"><code>.block</code></span></li>
-          <li><span class="records__name">Card grid</span><span class="records__for">3 columns · 4px gap · 445∶597 portrait</span><span class="records__year"><code>--card-gap</code></span></li>
-          <li><span class="records__name">Tile grid</span><span class="records__for">2 columns · 2px gap · 128px tall</span><span class="records__year"><code>--tile-gap</code></span></li>
+          <li><span class="records__name">Page gutter</span><span class="records__for">48px tablet and up · 16px phone</span><span class="records__year"><code>--gutter</code></span></li>
+          <li><span class="records__name">Section gap</span><span class="records__for">120px tablet and up · 64px phone</span><span class="records__year"><code>--section-gap</code></span></li>
+          <li><span class="records__name">Content columns</span><span class="records__for">Label ⅓ · content ⅔, stacked on phones</span><span class="records__year"><code>.block</code></span></li>
+          <li><span class="records__name">Work rows</span><span class="records__for">Full width · 4px gap</span><span class="records__year"><code>--card-gap</code></span></li>
+          <li><span class="records__name">Tile grid</span><span class="records__for">2 columns · 2px gap · 128 / 104 / 86px tall</span><span class="records__year"><code>--tile-gap</code></span></li>
           <li><span class="records__name">Hero</span><span class="records__for">Full viewport height, name at the bottom</span><span class="records__year"><code>.hero</code></span></li>
         </ul>
       </div>
@@ -218,28 +216,11 @@
         </div>
 
         <div class="demo">
-          <span class="demo__label">Work cards · <code>.work</code> in a grid</span>
-          <ul class="works__items demo--cards" data-view="grid">
-            <li><a class="work" href="#components"><div class="work__media ph ph--1"></div><div class="work__info"><span class="work__name">Project One</span><span class="work__year">2026</span></div></a></li>
-            <li><a class="work" href="#components"><div class="work__media ph ph--2"></div><div class="work__info"><span class="work__name">Project Two</span><span class="work__year">2026</span></div></a></li>
-            <li><a class="work" href="#components"><div class="work__media ph ph--3"></div><div class="work__info"><span class="work__name">Project Three</span><span class="work__year">2025</span></div></a></li>
+          <span class="demo__label">Work rows · <code>.work-row</code> (hover to see the active state)</span>
+          <ul class="works__list">
+            <li><a class="work-row" href="#components"><span class="work-row__name">Project name</span><span class="work-row__meta">Type · Year</span></a></li>
+            <li><a class="work-row" href="#components"><span class="work-row__name">Project name</span><span class="work-row__meta">Type · Year</span></a></li>
           </ul>
-        </div>
-
-        <div class="demo">
-          <span class="demo__label">Work rows · <code>.work</code> in a list</span>
-          <ul class="works__items" data-view="list">
-            <li><a class="work" href="#components"><div class="work__media ph ph--4"></div><div class="work__info"><span class="work__name">Project Four</span><span class="work__type">Category</span><span class="work__year">2025</span></div></a></li>
-            <li><a class="work" href="#components"><div class="work__media ph ph--5"></div><div class="work__info"><span class="work__name">Project Five</span><span class="work__type">Category</span><span class="work__year">2024</span></div></a></li>
-          </ul>
-        </div>
-
-        <div class="demo">
-          <span class="demo__label">View toggle · <code>.view-toggle</code></span>
-          <div class="view-toggle">
-            <button type="button" aria-pressed="true">Grid</button>
-            <button type="button" aria-pressed="false">List</button>
-          </div>
         </div>
 
         <div class="demo">
@@ -262,17 +243,12 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <p class="footer__name" aria-hidden="true"><span data-fit>Hana Ognjenovic</span></p>
-    <div class="footer__bar">
-      <span class="footer__time" data-clock></span>
-      <nav aria-label="Site">
-        <a href="index.html">Home</a>
-        <a href="index.html#works">Works</a>
-        <a href="index.html#about">About</a>
-      </nav>
-      <span class="footer__copy">© <span data-year></span> Hana Ognjenovic</span>
+  <footer class="footer" id="contact">
+    <div class="footer__contact">
+      <a href="mailto:h.ognjenovic@gmail.com">h.ognjenovic@gmail.com <span class="arrow" aria-hidden="true">↘</span></a>
+      <a href="tel:+381642472419">+381 64 247 2419 <span class="arrow" aria-hidden="true">↘</span></a>
     </div>
+    <p class="footer__name"><span data-fit>Let’s connect.</span></p>
   </footer>
 
   <script src="js/main.js"></script>

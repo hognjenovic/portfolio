@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hana Ognjenovic — Portfolio</title>
-  <meta name="description" content="Portfolio of Hana Ognjenovic. Replace this with a one-sentence description of your work.">
+  <meta name="description" content="Hana Ognjenovic is a product designer based in Belgrade, making complex products easier to understand and more useful in everyday life.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -35,138 +35,50 @@
 
     <!-- TAGLINE -->
     <section class="statement">
-      <p class="statement__text">A one-line statement about what you do, who you do it for, and what makes your work worth remembering.</p>
+      <p class="statement__text">I like to understand the mess before trying to fix it.</p>
     </section>
 
     <!-- SELECTED WORKS -->
     <section class="works" id="works">
-      <div class="works__head">
-        <h2 class="works__title">Selected Works</h2>
-        <div class="view-toggle" role="group" aria-label="Change layout">
-          <button type="button" data-view="grid" aria-pressed="true">Grid</button>
-          <button type="button" data-view="list" aria-pressed="false">List</button>
-        </div>
-      </div>
-
-      <!-- Each card: swap the placeholder for <img src="assets/..." alt="..."> inside .work__media -->
-      <ul class="works__items" data-view="grid">
+      <h2 class="works__title">Selected Works</h2>
+      <!-- Each row links to its case study page in projects/ -->
+      <ul class="works__list">
         <li>
-          <a class="work" href="projects/project.html">
-            <div class="work__media ph ph--1"></div>
-            <div class="work__info">
-              <span class="work__name">Project One</span>
-              <span class="work__type">Category</span>
-              <span class="work__year">2026</span>
-            </div>
+          <a class="work-row" href="projects/project.html">
+            <span class="work-row__name">JobCloud</span>
+            <span class="work-row__meta">In-house · May 2022 – Present</span>
           </a>
         </li>
         <li>
-          <a class="work" href="projects/project.html">
-            <div class="work__media ph ph--2"></div>
-            <div class="work__info">
-              <span class="work__name">Project Two</span>
-              <span class="work__type">Category</span>
-              <span class="work__year">2026</span>
-            </div>
+          <a class="work-row" href="projects/project.html">
+            <span class="work-row__name">Wingman AI</span>
+            <span class="work-row__meta">Startup · 2025</span>
           </a>
         </li>
         <li>
-          <a class="work" href="projects/project.html">
-            <div class="work__media ph ph--3"></div>
-            <div class="work__info">
-              <span class="work__name">Project Three</span>
-              <span class="work__type">Category</span>
-              <span class="work__year">2025</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="work" href="projects/project.html">
-            <div class="work__media ph ph--4"></div>
-            <div class="work__info">
-              <span class="work__name">Project Four</span>
-              <span class="work__type">Category</span>
-              <span class="work__year">2025</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="work" href="projects/project.html">
-            <div class="work__media ph ph--5"></div>
-            <div class="work__info">
-              <span class="work__name">Project Five</span>
-              <span class="work__type">Category</span>
-              <span class="work__year">2024</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="work" href="projects/project.html">
-            <div class="work__media ph ph--6"></div>
-            <div class="work__info">
-              <span class="work__name">Project Six</span>
-              <span class="work__type">Category</span>
-              <span class="work__year">2024</span>
-            </div>
+          <a class="work-row" href="projects/project.html">
+            <span class="work-row__name">Grape</span>
+            <span class="work-row__meta">Startup · 2025</span>
           </a>
         </li>
       </ul>
     </section>
 
-    <!-- INTRO STATEMENT -->
+    <!-- STATEMENT -->
     <section class="statement statement--soft">
-      <p class="statement__text">A second short statement describing your focus, your approach, or the kind of work you want more of.</p>
+      <p class="statement__text">My work sits between people, business needs, and technology, making complex products easier to understand and more useful in everyday life.</p>
     </section>
 
-    <!-- SERVICES -->
+    <!-- HOW I CAN HELP -->
     <section class="block" id="services">
-      <h2 class="block__label">Services</h2>
+      <h2 class="block__label">How I can help</h2>
       <ul class="tiles">
-        <li>Service one</li>
-        <li>Service two</li>
-        <li>Service three</li>
-        <li>Service four</li>
-        <li>Service five</li>
-        <li>Service six</li>
-      </ul>
-    </section>
-
-    <!-- EXPERTISE -->
-    <section class="block" id="expertise">
-      <h2 class="block__label">Expertise</h2>
-      <ul class="tiles">
-        <li>Industry one</li>
-        <li>Industry two</li>
-        <li>Industry three</li>
-        <li>Industry four</li>
-        <li>Industry five</li>
-        <li>Industry six</li>
-      </ul>
-    </section>
-
-    <!-- CLIENTS -->
-    <section class="block" id="clients">
-      <h2 class="block__label">Clients</h2>
-      <!-- Swap the text for logos: <li><img src="assets/client.svg" alt="Client name"></li> -->
-      <ul class="tiles tiles--solid">
-        <li>Client one</li>
-        <li>Client two</li>
-        <li>Client three</li>
-        <li>Client four</li>
-        <li>Client five</li>
-        <li>Client six</li>
-      </ul>
-    </section>
-
-    <!-- RECOGNITION -->
-    <section class="block" id="recognition">
-      <h2 class="block__label">Recognition</h2>
-      <ul class="records">
-        <li><span class="records__name">Award or feature</span><span class="records__for">Project One</span><span class="records__year">2026</span></li>
-        <li><span class="records__name">Award or feature</span><span class="records__for">Project Two</span><span class="records__year">2026</span></li>
-        <li><span class="records__name">Award or feature</span><span class="records__for">Project Three</span><span class="records__year">2025</span></li>
-        <li><span class="records__name">Award or feature</span><span class="records__for">Project Four</span><span class="records__year">2025</span></li>
-        <li><span class="records__name">Award or feature</span><span class="records__for">Project Five</span><span class="records__year">2024</span></li>
+        <li>Product Discovery</li>
+        <li>UX &amp; Interaction Design</li>
+        <li>User Research</li>
+        <li>Ideas &amp; Prototyping</li>
+        <li>Design Systems &amp; UI</li>
+        <li>Cross-functional Collaboration</li>
       </ul>
     </section>
 
@@ -174,40 +86,22 @@
     <section class="block" id="about">
       <h2 class="block__label">About</h2>
       <div class="about__text">
-        <p>Hi, I'm Hana Ognjenovic — replace this with a short introduction: what you do and what you focus on.</p>
-        <p>Use the second paragraph for how you work: your process, what you believe makes good work, and what clients can expect from you.</p>
-        <p>Use the third for what sets you apart, or the kind of problems you most enjoy solving.</p>
-        <p>Close with who you like to work with and how to start a conversation.</p>
+        <p>Hi, I’m Hana.</p>
+        <p>A product designer who enjoys understanding how things work and making them easier to use.</p>
+        <p>I’m naturally curious and tend to ask a lot of questions before reaching for a solution. My work spans user research, UX and interaction design, prototyping, and design systems, with a strong focus on clarity, feasibility, and detail.</p>
+        <p>Outside work, I knit, crochet, hike, and regularly disappear into a new side quest. I like projects that require patience, curiosity, and a willingness to figure things out as I go.</p>
       </div>
     </section>
-
-    <div class="portrait">
-      <!-- Swap for <img src="assets/portrait.png" alt="Portrait of Hana Ognjenovic"> -->
-      <div class="portrait__ph ph ph--5" role="img" aria-label="Portrait placeholder"></div>
-    </div>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="footer" id="contact">
     <div class="footer__contact">
-      <a href="mailto:hello@example.com">hello@example.com <span class="arrow" aria-hidden="true">↘</span></a>
-      <a href="tel:+10000000000">+1 000 000 0000 <span class="arrow" aria-hidden="true">↘</span></a>
+      <a href="mailto:h.ognjenovic@gmail.com">h.ognjenovic@gmail.com <span class="arrow" aria-hidden="true">↘</span></a>
+      <a href="tel:+381642472419">+381 64 247 2419 <span class="arrow" aria-hidden="true">↘</span></a>
     </div>
-    <p class="footer__name" aria-hidden="true"><span data-fit>Hana Ognjenovic</span></p>
-    <div class="footer__bar">
-      <span class="footer__time" data-clock></span>
-      <nav aria-label="Sections">
-        <a href="#works">Works</a>
-        <a href="#about">About</a>
-      </nav>
-      <nav aria-label="Social links">
-        <a href="#" target="_blank" rel="noopener">X</a>
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-      </nav>
-      <span class="footer__copy">© <span data-year></span> Hana Ognjenovic</span>
-    </div>
+    <p class="footer__name"><span data-fit>Let’s connect.</span></p>
   </footer>
 
   <script src="js/main.js"></script>

@@ -27,11 +27,11 @@
   --weight-semibold: 600;
   --weight-bold: 700;
 
-  /* Type scale: phone size -> desktop size */
-  --text-h1: clamp(30px, 3.9vw, 56px);
-  --text-h2: clamp(30px, 3.34vw, 48px);
-  --text-h3: clamp(24px, 2.5vw, 36px);
-  --text-tile: clamp(14px, 1.39vw, 20px);
+  /* Type scale: desktop values; tablet and phone values are set below the tokens */
+  --text-h1: 56px;
+  --text-h2: 48px;
+  --text-h3: 36px;
+  --text-tile: 20px;
   --text-body: 16px;
   --text-label: 16px;
 
@@ -65,8 +65,9 @@
 
   /* Layout */
   --gutter: 48px;
-  --gutter-footer: clamp(16px, 2.23vw, 32px);
-  --section-gap: clamp(64px, 8.34vw, 120px);
+  --section-gap: 120px;
+  --block-gap: 180px;
+  --tile-height: 128px;
   --card-gap: var(--space-4);
   --tile-gap: var(--space-2);
 
@@ -76,8 +77,28 @@
 }
 
 /* Breakpoints: phone up to 809px, tablet 810-1199px, desktop from 1200px */
+@media (max-width: 1199px) {
+  :root {
+    --text-h1: 36px;
+    --text-h2: 36px;
+    --text-h3: 32px;
+    --text-tile: 18px;
+    --block-gap: 120px;
+    --tile-height: 104px;
+  }
+}
+
 @media (max-width: 809px) {
-  :root { --gutter: 16px; }
+  :root {
+    --gutter: 16px;
+    --text-h1: 30px;
+    --text-h2: 30px;
+    --text-h3: 24px;
+    --text-tile: 14px;
+    --section-gap: 64px;
+    --block-gap: 64px;
+    --tile-height: 86px;
+  }
 }
 
 /* ---------- Base ---------- */
@@ -159,7 +180,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .hero__role, .hero__contact { font-weight: var(--weight-light); }
 .hero__lead { font-weight: var(--weight-medium); }
 .hero__nav { display: contents; }
-.hero__bar a:hover, .footer__bar a:hover { opacity: 0.65; }
+.hero__bar a:hover { opacity: 0.65; }
 
 .hero__name {
   /* Sized by width, but capped by height so it still fits on short, wide screens */
@@ -184,21 +205,11 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   .hero__name { font-size: min(14.8vw, 30vh); font-size: min(14.8vw, 30svh); }
 }
 
-/* Footer display type: js/main.js scales it to the width of its container */
-.footer__name {
-  font-size: 11vw;
-  line-height: var(--leading-display);
-  letter-spacing: var(--tracking-display);
-  white-space: nowrap;
-}
-
-.footer__name span { display: inline-block; }
-
 /* ---------- Large statements ---------- */
 .statement { padding: var(--section-gap) var(--gutter) 0; }
 
 .statement__text {
-  max-width: 18em;
+  max-width: 15em;
   color: var(--color-primary);
   font-size: var(--text-h1);
   font-weight: var(--weight-semibold);
@@ -217,110 +228,46 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 /* ---------- Selected works ---------- */
 .works { padding: var(--section-gap) var(--gutter) 0; }
 
-.works__head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-16);
-  margin-bottom: var(--space-40);
-}
-
 .works__title {
+  margin-bottom: var(--space-40);
   font-size: var(--text-h3);
   font-weight: var(--weight-regular);
   line-height: var(--leading-heading);
   letter-spacing: var(--tracking-heading);
 }
 
-.view-toggle {
+.works__list { display: grid; gap: var(--card-gap); }
+
+.work-row {
   display: flex;
-  gap: var(--space-12);
-  font-size: var(--text-label);
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-label);
-  letter-spacing: var(--tracking-label);
-}
-
-.view-toggle button { color: var(--color-muted); }
-.view-toggle button[aria-pressed="true"] { color: var(--color-ink); }
-
-.work__media { overflow: hidden; }
-.work__media img { width: 100%; height: 100%; object-fit: cover; }
-
-/* Grid view */
-.works__items[data-view="grid"] {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--card-gap);
-}
-
-.works__items[data-view="grid"] .work {
-  position: relative;
-  display: block;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.works__items[data-view="grid"] .work__media {
-  aspect-ratio: 445 / 597;
-  transition: transform 0.6s ease;
-}
-
-.works__items[data-view="grid"] .work:hover .work__media { transform: scale(1.03); }
-
-.works__items[data-view="grid"] .work__info {
-  position: absolute;
-  inset: auto 0 0 0;
-  display: flex;
-  gap: var(--space-10);
-  align-items: baseline;
-  padding: var(--space-48) var(--space-16) var(--space-16);
-  color: var(--color-on-primary);
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-label);
-  letter-spacing: var(--tracking-label);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-
-.works__items[data-view="grid"] .work__name { margin-right: auto; }
-.works__items[data-view="grid"] .work__type,
-.works__items[data-view="grid"] .work__year { font-weight: var(--weight-light); color: var(--color-on-primary-soft); }
-
-/* List view */
-.works__items[data-view="list"] { border-top: 1px solid var(--color-line); }
-
-.works__items[data-view="list"] .work {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: var(--space-20);
+  flex-wrap: wrap;
   align-items: center;
-  padding: var(--space-16) 0;
-  border-bottom: 1px solid var(--color-line);
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-24);
+  padding: var(--space-30);
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.works__items[data-view="list"] .work__media {
-  aspect-ratio: 1;
-  border-radius: var(--radius-sm);
-}
-
-.works__items[data-view="list"] .work__info {
-  display: grid;
-  grid-template-columns: 2fr 1fr auto;
-  gap: var(--space-16);
-  align-items: baseline;
-}
-
-.works__items[data-view="list"] .work__name {
-  font-size: var(--text-h3);
+.work-row__name {
+  font-size: var(--text-h2);
   font-weight: var(--weight-regular);
   line-height: var(--leading-heading);
   letter-spacing: var(--tracking-heading);
 }
 
-.works__items[data-view="list"] .work__type,
-.works__items[data-view="list"] .work__year { color: var(--color-ink-soft); }
+.work-row__meta {
+  color: var(--color-ink-soft);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-label);
+  letter-spacing: var(--tracking-label);
+  transition: color 0.2s ease;
+}
 
-.works__items[data-view="list"] .work:hover .work__name { color: var(--color-primary); }
+.work-row:hover, .work-row:focus-visible { background: var(--color-primary); color: var(--color-on-primary); }
+.work-row:hover .work-row__meta, .work-row:focus-visible .work-row__meta { color: var(--color-on-primary); }
 
 /* ---------- Label + content blocks (services, expertise, clients, recognition, about) ---------- */
 .block {
@@ -329,6 +276,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   gap: var(--space-24) var(--tile-gap);
   padding: var(--section-gap) var(--gutter) 0;
 }
+
+.block + .block { padding-top: var(--block-gap); }
 
 .block__label {
   color: var(--color-primary);
@@ -347,7 +296,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .tiles li {
   display: grid;
   place-items: center;
-  min-height: clamp(86px, 8.9vw, 128px);
+  min-height: var(--tile-height);
   padding: var(--space-16);
   border-radius: var(--radius-lg);
   background: var(--color-primary-tint);
@@ -359,7 +308,6 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 }
 
 .tiles--solid li {
-  min-height: clamp(86px, 8.34vw, 120px);
   background: var(--color-primary);
   color: var(--color-on-primary);
 }
@@ -397,9 +345,9 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 /* ---------- Footer ---------- */
 .footer {
-  margin-top: var(--section-gap);
-  padding: var(--section-gap) var(--gutter-footer) var(--gutter-footer);
-  background: var(--color-primary);
+  margin-top: var(--space-100);
+  padding: var(--section-gap) var(--gutter) clamp(32px, 4.5vw, 64px);
+  background: var(--color-hero);
   color: var(--color-on-primary);
   overflow: hidden;
 }
@@ -408,8 +356,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--space-10) var(--space-30);
-  padding: 0 var(--space-10);
+  gap: 0 var(--space-30);
   color: var(--color-on-primary-dim);
   font-size: var(--text-h2);
   font-weight: var(--weight-regular);
@@ -421,21 +368,21 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .footer__contact a:hover { color: var(--color-on-primary); }
 .footer__contact .arrow { font-size: 0.5em; vertical-align: middle; }
 
+/* js/main.js scales this line to the full width of the footer */
 .footer__name {
-  margin: 0 0 0.14em;
+  font-size: 11vw;
   font-weight: var(--weight-bold);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  white-space: nowrap;
 }
 
-.footer__bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--space-12) var(--space-30);
-}
+.footer__name span { display: inline-block; }
 
-.footer__bar nav { display: flex; gap: var(--space-16); }
-.footer__time { font-variant-numeric: tabular-nums; }
-.footer__copy { color: var(--color-on-primary-soft); }
+/* Tablet and phone: email and phone stack on the left */
+@media (max-width: 1199px) {
+  .footer__contact { flex-direction: column; }
+}
 
 /* ---------- Project page ---------- */
 .topbar {
@@ -507,13 +454,13 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 /* ---------- Phone (809px and below) ---------- */
 @media (max-width: 809px) {
-  .works__items[data-view="grid"] { grid-template-columns: repeat(2, 1fr); }
+  .statement:not(.statement--soft) .statement__text { max-width: 9.8em; }
   .block { grid-template-columns: 1fr; }
+  .work-row { flex-direction: column; align-items: flex-start; padding: var(--space-20) var(--space-16); }
+  .footer__contact { font-size: min(var(--text-h2), 7.6vw); }
 }
 
 @media (max-width: 560px) {
-  .works__items[data-view="list"] .work__info { grid-template-columns: 1fr auto; }
-  .works__items[data-view="list"] .work__type { display: none; }
   .records li { grid-template-columns: 1fr auto; }
   .records__for { grid-column: 1; grid-row: 2; }
   .project__meta { grid-template-columns: 1fr; }
