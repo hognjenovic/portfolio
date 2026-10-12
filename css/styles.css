@@ -505,8 +505,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   letter-spacing: var(--tracking-body);
 }
 
-/* ---------- Small screens ---------- */
-@media (max-width: 900px) {
+/* ---------- Phone (809px and below) ---------- */
+@media (max-width: 809px) {
   .works__items[data-view="grid"] { grid-template-columns: repeat(2, 1fr); }
   .block { grid-template-columns: 1fr; }
 }

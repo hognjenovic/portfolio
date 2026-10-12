@@ -1,5 +1,5 @@
 // Timezone shown in the footer clock. Any IANA name works, e.g. "Europe/London".
-const TIME_ZONE = "Europe/Vienna";
+const TIME_ZONE = "Europe/Belgrade";
 
 // Scale each [data-fit] element so its text spans the full width of its parent.
 function fitText() {
