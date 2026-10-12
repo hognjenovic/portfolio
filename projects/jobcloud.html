@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JobCloud — Hana Ognjenovic</title>
-  <meta name="description" content="In-house product design at JobCloud, May 2022 to present.">
+  <title>Job Advisor for jobs.ch — Hana Ognjenovic</title>
+  <meta name="description" content="Case study: designing and testing a conversational job-search assistant prototype for jobs.ch.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,47 +29,249 @@
 
   <main class="case__main">
 
-    <!-- TITLE, FACTS, INTRO -->
+    <!--
+      TO VERIFY BEFORE PUBLISHING
+      1. Source, timeframe and exact definition of the ~68% first-time-query metric.
+      2. Source, definitions and timeframe for 6.7% first-visit and 10.5% return-visit application starts.
+      3. Whether the "a job at Migros" wording appeared in a real test, in the prototype, or is only illustrative
+         (it is labelled "Illustrative example" on the page until confirmed).
+      4. Exact Round 1 findings and exactly what changed between Round 1 and Round 2.
+      5. Which Round 2 expectations were raised by participants and which were identified by the design team.
+      6. Which next actions were present in the tested prototype and which were only proposed.
+      7. Whether screenshots contain information that must be blurred or anonymised.
+      8. Exact ownership boundaries among Hana, PM, engineering and research collaborators.
+      Every dashed box on the page is a placeholder for a real screenshot; add alt text when replacing it.
+    -->
+
+    <!-- TITLE, SNAPSHOT, SUMMARY -->
     <section class="case__card">
-      <h1 class="case__title">JobCloud</h1>
-      <dl class="case__facts">
-        <div><dt>Scope</dt><dd>[Scope: what you worked on]</dd></div>
-        <div><dt>Client</dt><dd>JobCloud</dd></div>
-        <div><dt>Year</dt><dd>2022 – Present</dd></div>
-        <div><dt>Industry</dt><dd>[Industry]</dd></div>
+      <p class="case__eyebrow">JobCloud · Job Advisor for jobs.ch</p>
+      <h1 class="case__title case__title--long">From a blank search box to a useful first conversation</h1>
+      <dl class="case__facts case__facts--six">
+        <div><dt>Role</dt><dd>Product Designer</dd></div>
+        <div><dt>Team</dt><dd>FIND team; worked with product, engineering, and research support</dd></div>
+        <div><dt>Scope</dt><dd>Problem framing, interaction and conversation design, prototype, and moderated usability testing</dd></div>
+        <div><dt>Timeline</dt><dd>Approximately two months</dd></div>
+        <div><dt>Status</dt><dd>Tested prototype; not launched</dd></div>
+        <div><dt>Research</dt><dd>Two rounds of moderated usability testing, six participants in each round</dd></div>
       </dl>
-      <p class="case__intro">[Intro: two or three sentences on what the product is, who it serves, and what this project set out to do.]</p>
+      <p class="case__intro case__intro--lead">I designed and tested a conversational job-search assistant for jobs.ch that helps new visitors express what they want in their own words, clarifies their intent, and turns it into a more useful job search.</p>
     </section>
 
-    <!-- COVER VISUAL -->
-    <figure class="case__media"><div class="case__ph">Visual placeholder</div></figure>
+    <!-- VISUAL 1: hero product screen -->
+    <div class="shot shot--hero">Add real screenshot: the assistant’s opening screen with the prompt<br>“Tell me what you’re after—or what you’ve been doing. Whichever is easier.”</div>
 
-    <!-- TEXT -->
-    <div class="case__body">
-      <section>
-        <h2>Context</h2>
-        <p>[Context: the situation and the problem. What wasn’t working, for whom, and why it mattered.]</p>
-      </section>
-      <section>
-        <h2>Approach</h2>
-        <p>[Approach: how you worked through it. Research, key decisions, and what you tried along the way.]</p>
-      </section>
-      <section>
-        <h2>Outcome</h2>
-        <p>[Outcome: what shipped and what changed as a result.]</p>
-      </section>
-      <section>
-        <h2>Credits</h2>
-        <p>Product Design<br>Hana Ognjenovic</p>
-      </section>
-    </div>
+    <!-- THE PROBLEM -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>The problem</h2>
+        <p>New visitors often arrive with an intention rather than a precise job title. They may know what kind of work they want, what they have experience in, where they want to work, or what constraints matter—but not the exact keywords or filters to enter.</p>
+        <p>The existing experience began with a blank search box and expected users to translate that thought into the platform’s vocabulary before the product could help.</p>
+        <p>Internal analysis suggested that approximately 68% of first-time queries were vague, empty, or overly broad. First-visit application starts were 6.7%, compared with 10.5% on return visits. These figures established the context for the opportunity; they do not show that the assistant improved conversion.</p>
+      </div>
 
-    <!-- GALLERY -->
-    <div class="case__gallery">
-      <figure class="case__media"><div class="case__ph">Visual placeholder</div></figure>
-      <figure class="case__media"><div class="case__ph">Visual placeholder</div></figure>
-      <figure class="case__media case__media--wide"><div class="case__ph">Visual placeholder</div></figure>
-    </div>
+      <!-- VISUAL 2: the blank-box problem -->
+      <div class="panels">
+        <div class="panel">
+          <p class="panel__label">Classic search</p>
+          <div class="mock-field">Job title or keyword</div>
+          <p class="panel__title">Start with a job title or keyword.</p>
+        </div>
+        <div class="panel">
+          <p class="panel__label">Assistant</p>
+          <div class="bubble bubble--assistant">Tell me what you’re after—or what you’ve been doing. Whichever is easier.</div>
+          <p class="panel__title">Start with what you want or what you’ve done.</p>
+        </div>
+        <div class="panel">
+          <p class="metric__value">~68%</p>
+          <p>vague, empty, or overly broad first-time queries</p>
+        </div>
+        <div class="panel">
+          <p class="metric__value">6.7% vs. 10.5%</p>
+          <p>first-visit vs. return-visit application starts</p>
+        </div>
+      </div>
+      <p class="case__note">Context for the opportunity, not results of the assistant. Internal analysis; definitions and timeframe to be confirmed before publication.</p>
+    </section>
+
+    <!-- SCOPE -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Scope</h2>
+        <p>The broader product direction was to move from a blank search box toward a system that could learn about a job seeker progressively through search, saved jobs, alerts, and future interactions.</p>
+        <p>My project focused on the first step: helping a new visitor express intent, clarifying unclear input, and reaching useful results without turning the interaction into a long profile form.</p>
+      </div>
+
+      <!-- VISUAL 3: scope diagram -->
+      <ol class="panels panels--4">
+        <li class="panel panel--active"><p class="panel__label">01 · This project</p><p class="panel__title">Capture intent</p></li>
+        <li class="panel"><p class="panel__label">02 · Broader direction</p><p class="panel__title">Deliver useful results</p></li>
+        <li class="panel"><p class="panel__label">03 · Broader direction</p><p class="panel__title">Save intent / create an alert</p></li>
+        <li class="panel"><p class="panel__label">04 · Broader direction</p><p class="panel__title">Build continuity over time</p></li>
+      </ol>
+    </section>
+
+    <!-- DESIGN CHALLENGE -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Design challenge</h2>
+        <p>The assistant needed to collect enough information to improve a search without making the interaction feel like a form. It also needed to avoid guessing. For example, “I want a job at Migros” names an employer but does not explain what kind of role the person wants.</p>
+        <p>The design question was:</p>
+      </div>
+      <blockquote class="case__quote">How might we capture enough intent during a first visit to give a job seeker useful results—without forcing a long profile flow or pretending the system understands more than it does?</blockquote>
+    </section>
+
+    <!-- RESEARCH AND ITERATION -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Research and iteration</h2>
+        <p>I ran two rounds of moderated usability testing, with six participants in each round. Round 1 tested a pop-up modal containing a set of filters. Participants understood it as helpful guidance, but found it underwhelming as an AI experience: it felt too much like a guided filter flow, especially compared with what they expected AI assistants to do.</p>
+        <p>That finding changed the interaction model. For Round 2, I designed a dedicated chat view with a guided conversation. The assistant gathered information conversationally while building structured search criteria in the background.</p>
+        <p>Classic search remained the default entry point; this was not an agent-first redesign. Participants found the assistant quickly and understood what it was before opening the tab.</p>
+      </div>
+
+      <!-- VISUAL 4: round 1 → design pivot → round 2 -->
+      <div class="panels panels--3">
+        <div class="panel">
+          <p class="panel__label">Round 1</p>
+          <p class="panel__title">Guided filter modal</p>
+          <div class="shot">Add real Round 1 modal screenshot</div>
+          <p>Helpful guidance, but perceived as too similar to filters to meet expectations of AI.</p>
+        </div>
+        <div class="panel panel--center">
+          <p class="panel__label">Design pivot</p>
+          <p class="panel__title panel__title--large">From collecting filter inputs to helping users articulate intent.</p>
+        </div>
+        <div class="panel">
+          <p class="panel__label">Round 2</p>
+          <p class="panel__title">Dedicated assistant conversation</p>
+          <div class="shot">Add real Round 2 assistant screenshot</div>
+          <p>Participants discovered it quickly and understood its purpose before opening it.</p>
+        </div>
+      </div>
+
+      <!-- VISUAL 5: how the new flow works. Remove any step that was not in the tested prototype. -->
+      <div class="case__text"><h3>How the new flow works</h3></div>
+      <ol class="panels panels--5">
+        <li class="panel"><p class="panel__label">01</p><p class="panel__title">Open prompt</p><div class="shot shot--tall">Add real prototype screen</div></li>
+        <li class="panel"><p class="panel__label">02</p><p class="panel__title">User describes a goal or experience</p><div class="shot shot--tall">Add real prototype screen</div></li>
+        <li class="panel"><p class="panel__label">03</p><p class="panel__title">Assistant asks a focused clarification</p><div class="shot shot--tall">Add real prototype screen</div></li>
+        <li class="panel"><p class="panel__label">04</p><p class="panel__title">Structured criteria build in the background</p><div class="shot shot--tall">Add real prototype screen</div></li>
+        <li class="panel"><p class="panel__label">05</p><p class="panel__title">Job results and next actions</p><div class="shot shot--tall">Add real prototype screen</div></li>
+      </ol>
+    </section>
+
+    <!-- KEY DESIGN DECISIONS -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Key design decisions</h2>
+        <h3>1. Start with the user’s words</h3>
+        <p>The first concept led with a fixed set of questions. I changed the opening to a single, low-pressure invitation so users could begin with either an aspiration or their current experience.</p>
+        <blockquote class="case__quote">“Tell me what you’re after—or what you’ve been doing. Whichever is easier.”</blockquote>
+      </div>
+
+      <!-- VISUAL 6: opening before/after -->
+      <div class="panels">
+        <div class="panel"><p class="panel__label">Before · Round 1</p><div class="shot shot--wide">Add real Round 1 modal screenshot</div></div>
+        <div class="panel"><p class="panel__label">After · Round 2</p><div class="shot shot--wide">Add real Round 2 opening screen screenshot</div></div>
+      </div>
+      <p class="case__note">From selecting filters to describing intent.</p>
+    </section>
+
+    <section class="case__section case__section--sub">
+      <div class="case__text">
+        <h3>2. Clarify ambiguity instead of guessing</h3>
+        <p>Some inputs sound confident but do not give enough information for search. A company name alone, multiple possible directions, a negation, or a past role plus a new target can each require clarification.</p>
+        <p>I designed focused follow-up patterns to make unclear intent explicit and help the user decide what they meant, rather than silently guessing.</p>
+      </div>
+
+      <!-- VISUAL 7: ambiguity example -->
+      <div class="panels">
+        <div class="panel">
+          <p class="panel__label">Illustrative example</p>
+          <div class="bubble bubble--user">I want a job at Migros.</div>
+          <div class="bubble bubble--assistant">What kind of role would you like there?</div>
+        </div>
+        <div class="panel panel--center">
+          <p class="panel__title panel__title--large">A company name identifies an employer, not the role.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case__section case__section--sub">
+      <div class="case__text">
+        <h3>3. Treat results as a decision point</h3>
+        <p>A result list should help users decide what to do next. The assistant’s proposed result experience included options to refine the search, keep users posted about similar jobs, and explore relevant information.</p>
+      </div>
+
+      <!-- VISUAL 8: results and next actions -->
+      <div class="shot shot--wide">Add real results screenshot.<br>Annotate: job results, the refine option, and save / alert or another next action only if it is shown in the prototype.</div>
+    </section>
+
+    <!-- WHAT TESTING TAUGHT ME -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>What testing taught me</h2>
+        <p>In Round 2, participants saw natural-language search as a flexible way to express detailed needs. They particularly valued the potential to discover related roles, synonyms, and alternative titles they might not have searched for directly.</p>
+        <p>Testing also revealed expectations beyond the conversation itself:</p>
+        <ul>
+          <li>Users expected job ads to open without losing their conversation or results.</li>
+          <li>They expected chat, filters, preferences, and saved searches to persist when moving between the assistant and classic search.</li>
+          <li>They wanted AI summaries to remain secondary to the employer’s original job-ad content.</li>
+          <li>They expected multi-select to be available for relevant criteria such as roles, skills, location, and work preferences.</li>
+        </ul>
+        <p class="case__note">These are qualitative findings from prototype testing, not measured launch outcomes.</p>
+      </div>
+
+      <!-- VISUAL 9: what worked / what needed refinement -->
+      <div class="panels">
+        <div class="panel">
+          <p class="panel__title">What participants valued</p>
+          <ul>
+            <li>Expressing detailed needs in natural language</li>
+            <li>Discovering related roles and alternative titles</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <p class="panel__title">What they expected next</p>
+          <ul>
+            <li>Preserve conversation and search state</li>
+            <li>Keep original job-ad content available</li>
+            <li>Support multi-select where useful</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOME AND NEXT STEP -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Outcome and next step</h2>
+        <p>The assistant was a tested prototype and had not launched. The two rounds helped us move from a modal that felt like guided filtering to a dedicated conversational experience that participants could discover and understand.</p>
+        <p>The next step was to validate the experience in a real product setting. Useful post-launch measures could include assistant discovery and activation, search refinement, relevant-result engagement, application starts, account creation, and alert adoption. These are proposed measures, not results from this prototype work.</p>
+      </div>
+
+      <!-- VISUAL 10: tested vs. next -->
+      <div class="panels">
+        <div class="panel">
+          <p class="panel__title">Validated qualitatively</p>
+          <ul>
+            <li>Users understood the assistant’s purpose</li>
+            <li>Natural language felt useful for expressing intent</li>
+            <li>Participants expected continuity and control</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <p class="panel__title">To validate after launch</p>
+          <ul>
+            <li>Search activation</li>
+            <li>Result relevance and engagement</li>
+            <li>Application starts</li>
+            <li>Account creation and alert adoption</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <nav class="case__next" aria-label="Next project">
       <a href="wingman-ai.html">Wingman AI ›</a>
