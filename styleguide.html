@@ -51,7 +51,7 @@
 
     .demo { margin-bottom: var(--space-48); }
     .demo__label { display: block; margin-bottom: var(--space-12); color: var(--color-ink-soft); line-height: 1.5; }
-    .demo--onprimary { padding: var(--space-30); border-radius: var(--radius-lg); background: var(--color-hero); color: var(--color-on-primary); }
+    .demo--onprimary { padding: var(--space-30); border-radius: var(--radius-lg); background: var(--color-primary-bright); color: var(--color-on-primary); }
 
     @media (max-width: 560px) {
       .scale li { grid-template-columns: 110px 1fr; }
@@ -83,11 +83,11 @@
     <section class="block" id="colour">
       <h2 class="block__label">Colour</h2>
       <div>
-        <p class="sg-note">One saturated blue does all the brand work: headlines, labels, solid tiles and hover states. Everything else is white, near-black and two greys.</p>
+        <p class="sg-note">One blue in three steps does all the brand work. Primary is used for headlines, labels and hover states; the hero blends all three, from deep behind the headline to bright at the far corner. Everything else is white, near-black and two greys.</p>
         <ul class="swatches">
-          <li><div class="swatch__chip" style="background: var(--color-primary)"></div><div class="swatch__meta"><span class="swatch__name">Primary · #000BAB</span><code>--color-primary</code><span class="swatch__use">Headlines, labels, solid tiles, row hover</span></div></li>
-          <li><div class="swatch__chip" style="background: var(--color-hero)"></div><div class="swatch__meta"><span class="swatch__name">Hero · #1B1FD2</span><code>--color-hero</code><span class="swatch__use">Hero and footer background</span></div></li>
-          <li><div class="swatch__chip" style="background: var(--color-hero-shade)"></div><div class="swatch__meta"><span class="swatch__name">Hero shade · #14145F</span><code>--color-hero-shade</code><span class="swatch__use">Dark shapes in the hero</span></div></li>
+          <li><div class="swatch__chip" style="background: var(--color-primary)"></div><div class="swatch__meta"><span class="swatch__name">Primary · #000BAB</span><code>--color-primary</code><span class="swatch__use">Headlines, labels, row hover, hero and 404 background</span></div></li>
+          <li><div class="swatch__chip" style="background: var(--color-primary-bright)"></div><div class="swatch__meta"><span class="swatch__name">Primary bright · #1B1FD2</span><code>--color-primary-bright</code><span class="swatch__use">Footer; lightest corner of the hero</span></div></li>
+          <li><div class="swatch__chip" style="background: var(--color-primary-deep)"></div><div class="swatch__meta"><span class="swatch__name">Primary deep · #000550</span><code>--color-primary-deep</code><span class="swatch__use">Dark shade behind the hero headline</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-primary-tint)"></div><div class="swatch__meta"><span class="swatch__name">Primary tint · #F5F5FF</span><code>--color-primary-tint</code><span class="swatch__use">Tile backgrounds</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-ink)"></div><div class="swatch__meta"><span class="swatch__name">Ink · #0A0A0A</span><code>--color-ink</code><span class="swatch__use">Body text, titles</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-ink-soft)"></div><div class="swatch__meta"><span class="swatch__name">Ink soft · #333333</span><code>--color-ink-soft</code><span class="swatch__use">Secondary text in lists</span></div></li>
