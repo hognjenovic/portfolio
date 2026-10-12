@@ -51,6 +51,9 @@
 
     .demo { margin-bottom: var(--space-48); }
     .demo__label { display: block; margin-bottom: var(--space-12); color: var(--color-ink-soft); line-height: 1.5; }
+    .demo--case { padding: var(--space-16); border-radius: var(--radius-lg); background: var(--color-primary); color: var(--color-on-primary); }
+    .demo--case .case__body { padding: var(--space-48) var(--space-16) var(--space-16); }
+    .demo--case .case__media--wide { aspect-ratio: 1344 / 845; }
     .demo--onprimary { padding: var(--space-30); border-radius: var(--radius-lg); background: var(--color-primary-bright); color: var(--color-on-primary); }
 
     @media (max-width: 560px) {
@@ -91,6 +94,7 @@
           <li><div class="swatch__chip" style="background: var(--color-primary-tint)"></div><div class="swatch__meta"><span class="swatch__name">Primary tint · #F5F5FF</span><code>--color-primary-tint</code><span class="swatch__use">Tile backgrounds</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-ink)"></div><div class="swatch__meta"><span class="swatch__name">Ink · #0A0A0A</span><code>--color-ink</code><span class="swatch__use">Body text, titles</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-ink-soft)"></div><div class="swatch__meta"><span class="swatch__name">Ink soft · #333333</span><code>--color-ink-soft</code><span class="swatch__use">Secondary text in lists</span></div></li>
+          <li><div class="swatch__chip" style="background: var(--color-ink-faint)"></div><div class="swatch__meta"><span class="swatch__name">Ink faint · #8F8F8F</span><code>--color-ink-faint</code><span class="swatch__use">Fact labels on case studies</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-muted)"></div><div class="swatch__meta"><span class="swatch__name">Muted · #B8B8B8</span><code>--color-muted</code><span class="swatch__use">Inactive controls</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-line)"></div><div class="swatch__meta"><span class="swatch__name">Line · #EBEBEB</span><code>--color-line</code><span class="swatch__use">Dividers</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-bg)"></div><div class="swatch__meta"><span class="swatch__name">Background · #FFFFFF</span><code>--color-bg</code><span class="swatch__use">Page</span></div></li>
@@ -108,6 +112,10 @@
         <div class="specimen">
           <div class="specimen__meta"><b>Display</b><span>scaled to fit · 600 hero / 700 footer · tracking −7%</span></div>
           <p class="t-display">Display</p>
+        </div>
+        <div class="specimen">
+          <div class="specimen__meta"><b>Case study title</b><span>120 / 80 / 48px · 500 · line 0.9 · tracking −5%</span><code>--text-case-title</code></div>
+          <p class="case__title">JobCloud</p>
         </div>
         <div class="specimen">
           <div class="specimen__meta"><b>Heading 1</b><span>56 / 36 / 30px · 600 · line 1.1 · tracking −5%</span><code>--text-h1</code></div>
@@ -221,6 +229,24 @@
             <li><a class="work-row" href="#components"><span class="work-row__name">Project name</span><span class="work-row__meta">Type · Year</span></a></li>
             <li><a class="work-row" href="#components"><span class="work-row__name">Project name</span><span class="work-row__meta">Type · Year</span></a></li>
           </ul>
+        </div>
+
+        <div class="demo">
+          <span class="demo__label">Case study card · <code>.case__card</code> on the primary blue</span>
+          <div class="demo--case">
+            <section class="case__card">
+              <h3 class="case__title">Project</h3>
+              <dl class="case__facts">
+                <div><dt>Scope</dt><dd>Scope of work</dd></div>
+                <div><dt>Client</dt><dd>Client</dd></div>
+                <div><dt>Year</dt><dd>2025</dd></div>
+                <div><dt>Industry</dt><dd>Industry</dd></div>
+              </dl>
+              <p class="case__intro">A short introduction to the project sits here.</p>
+            </section>
+            <figure class="case__media case__media--wide"><div class="case__ph">Visual placeholder</div></figure>
+            <div class="case__body"><section><h2>Section label</h2><p>Section text, in soft white on the blue page.</p></section></div>
+          </div>
         </div>
 
         <div class="demo">
