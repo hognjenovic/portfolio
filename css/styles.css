@@ -21,6 +21,8 @@
   --color-muted: #b8b8b8;
   --color-line: #ebebeb;
   --color-bg: #ffffff;
+  /* Site shell: case study top band and footer, the same on every page */
+  --color-shell: #1a1a1a;
   --color-on-primary: #ffffff;
   --color-on-primary-soft: #ededed;
   --color-on-primary-dim: rgba(255, 255, 255, 0.6);
@@ -86,8 +88,6 @@
 
 /* ---------- Colour themes ----------
    Each theme overrides the accent colours. Add a class to <body> to apply one. */
-.theme-neutral .footer { background: #1a1a1a; }
-
 .theme-neutral {
   --color-primary: #1a1a1a;
   --color-primary-bright: #3d3d3b;
@@ -98,13 +98,11 @@
   --hero-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  3.4 0 0 0 -1.32'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.15' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.48  0 1.9 0 0 -1.02'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23d)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23l)'/%3E%3C/svg%3E");
 }
 
-/* JobCloud brand: Blackberry for small text and surfaces, Raspberry for large type,
-   a pale peach tint for panels */
+/* JobCloud brand details on the neutral shell: Raspberry for large type and the marker,
+   Blackberry for small accent text and highlighted blocks, neutral grey panels */
 .theme-jobcloud {
   --color-primary: #321e50;
-  --color-primary-bright: #321e50;
-  --color-primary-deep: #1e1230;
-  --color-primary-tint: #fff3ee;
+  --color-primary-tint: #f3f3f1;
   --color-display: #fa463c;
 }
 
@@ -345,6 +343,11 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .work-row:hover, .work-row:focus-visible { background: var(--color-primary); color: var(--color-on-primary); }
 .work-row:hover .work-row__meta, .work-row:focus-visible .work-row__meta { color: var(--color-on-primary); }
 
+/* Rows preview their case study's brand colour on hover.
+   JobCloud: Blackberry name (large text, 4.2:1) and near-black detail line (5:1) on Raspberry */
+.work-row--jobcloud:hover, .work-row--jobcloud:focus-visible { background: #fa463c; color: #321e50; }
+.work-row--jobcloud:hover .work-row__meta, .work-row--jobcloud:focus-visible .work-row__meta { color: #1a1a1a; }
+
 /* ---------- Label + content blocks (services, expertise, clients, recognition, about) ---------- */
 .block {
   display: grid;
@@ -423,7 +426,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .footer {
   margin-top: var(--space-100);
   padding: var(--section-gap) var(--gutter) clamp(32px, 4.5vw, 64px);
-  background: var(--color-primary-bright);
+  background: var(--color-shell);
   color: var(--color-on-primary);
   overflow: hidden;
 }
@@ -494,7 +497,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .case__top {
   margin: 0 calc(-1 * var(--gutter)) var(--space-48);
   padding: var(--case-top) var(--gutter) var(--space-48);
-  background: var(--color-primary);
+  background: var(--color-shell);
 }
 
 /* White card: title, project facts, intro */
@@ -603,6 +606,17 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 }
 
 /* ---------- Long-form case study blocks ---------- */
+/* The small dot is the page's brand marker */
+.case__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: var(--space-10);
+  border-radius: 50%;
+  background: var(--color-display);
+}
+
 .case__eyebrow {
   margin-bottom: var(--space-24);
   color: var(--color-ink-faint);
