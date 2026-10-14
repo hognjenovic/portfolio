@@ -71,7 +71,6 @@
   --block-gap: 180px;
   --tile-height: 128px;
   --case-top: 220px;
-  --case-band: 380px;
   --card-gap: var(--space-4);
   --tile-gap: var(--space-2);
 
@@ -85,7 +84,6 @@
   :root {
     --text-case-title: 80px;
     --case-top: 200px;
-    --case-band: 340px;
     --text-h1: 36px;
     --text-h2: 36px;
     --text-h3: 32px;
@@ -100,7 +98,6 @@
     --gutter: 16px;
     --text-case-title: 48px;
     --case-top: 180px;
-    --case-band: 300px;
     --text-h1: 30px;
     --text-h2: 30px;
     --text-h3: 24px;
@@ -451,12 +448,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .topbar a:hover { color: var(--color-primary); }
 
 /* ---------- Case study page ---------- */
-.case {
-  position: relative;
-  /* Blue band behind the top bar and the top of the title card; white page for reading */
-  background: linear-gradient(var(--color-primary) var(--case-band), var(--color-bg) var(--case-band));
-  color: var(--color-ink);
-}
+.case { position: relative; background: var(--color-bg); color: var(--color-ink); }
 
 .case__bar {
   position: absolute;
@@ -467,7 +459,14 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 .case__bar .hero__role { display: block; }
 
-.case__main { padding: var(--case-top) var(--gutter) 0; }
+.case__main { padding: 0 var(--gutter); }
+
+/* Blue band behind the top bar and the whole title card; the page below is white for reading */
+.case__top {
+  margin: 0 calc(-1 * var(--gutter)) var(--space-48);
+  padding: var(--case-top) var(--gutter) var(--space-48);
+  background: var(--color-primary);
+}
 
 /* White card: title, project facts, intro */
 .case__card {
@@ -504,7 +503,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 /* Visuals. Swap a placeholder for <img src="../assets/<project>/file.jpg" alt="..."> */
 .case__media {
-  margin: var(--tile-gap) 0 0;
+  margin: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 1344 / 1245;
@@ -679,14 +678,15 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .screen { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; }
 .screen figcaption { line-height: 1.4; }
 .panel.screen figcaption:last-child { color: var(--color-ink-soft); }
-.screen--hero { margin-top: var(--tile-gap); }
 .screen img { width: 100%; height: auto; border: 1px solid var(--color-line); border-radius: var(--radius-sm); }
 .screen--hero img { border-radius: var(--radius-lg); }
 
 /* Screenshot placeholder. Replace with <img src="../assets/jobcloud/file.png" alt="..."> */
 .shot {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   aspect-ratio: 4 / 3;
   padding: var(--space-24);
   border: 1px dashed rgba(0, 11, 171, 0.35);
