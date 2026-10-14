@@ -45,6 +45,8 @@
   --text-tile: 20px;
   --text-body: 16px;
   --text-label: 16px;
+  /* Running text in case studies and About */
+  --text-reading: 18px;
 
   --leading-display: 1.12;
   --leading-h1: 1.1;
@@ -414,7 +416,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   letter-spacing: var(--tracking-label);
 }
 
-.about__text p + p { margin-top: 1.2em; }
+.about__text p { font-size: var(--text-reading); line-height: 1.45; }
+.about__text p + p { margin-top: 1em; }
 
 .portrait { padding: var(--section-gap) var(--gutter) 0; }
 
@@ -574,7 +577,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   letter-spacing: var(--tracking-label);
 }
 
-.case__body p { margin-top: var(--space-20); color: var(--color-ink-soft); line-height: 1.4; }
+.case__body p { margin-top: var(--space-20); color: var(--color-ink-soft); font-size: var(--text-reading); line-height: 1.45; }
 .case__body p + p { margin-top: 1em; }
 
 .case__gallery {
@@ -671,6 +674,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 /* :where() keeps this rule low-priority so panel labels, titles and metrics keep their own colours */
 .case__text p, .case__text li, .panel :where(p, li) { color: var(--color-ink-soft); line-height: 1.4; }
+.case__text p, .case__text li { font-size: var(--text-reading); line-height: 1.45; }
+.case__text .case__note { font-size: 14px; }
 .case__text p + p, .case__text ul + p { margin-top: 1em; }
 
 .case__text ul, .panel ul {
