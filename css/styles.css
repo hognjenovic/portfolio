@@ -9,6 +9,8 @@
   --color-primary: #000bab;
   --color-primary-bright: #1b1fd2;
   --color-primary-deep: #000550;
+  --hero-core: #000224;
+  --hero-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.02  0 0 0 0 0.02  0 0 0 0 0.16  3.4 0 0 0 -1.32'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.15' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.3  0 0 0 0 0.36  0 0 0 0 0.95  0 2.4 0 0 -1.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23d)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23l)'/%3E%3C/svg%3E");
   --color-primary-tint: #f5f5ff;
   --color-ink: #0a0a0a;
   --color-ink-soft: #333333;
@@ -77,6 +79,19 @@
   /* Shape */
   --radius-lg: 24px;
   --radius-sm: 10px;
+}
+
+/* ---------- Colour themes ----------
+   Each theme overrides the accent colours. Add a class to <body> to apply one. */
+.theme-neutral .footer { background: #1a1a1a; }
+
+.theme-neutral {
+  --color-primary: #1a1a1a;
+  --color-primary-bright: #3d3d3b;
+  --color-primary-deep: #050505;
+  --color-primary-tint: #f3f3f1;
+  --hero-core: #000000;
+  --hero-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  3.4 0 0 0 -1.32'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.15' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.48  0 1.9 0 0 -1.02'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23d)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23l)'/%3E%3C/svg%3E");
 }
 
 /* Breakpoints: phone up to 809px, tablet 810-1199px, desktop from 1200px */
@@ -155,11 +170,11 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   overflow: hidden;
   background-color: var(--color-primary);
   /* Heavy grain on top; underneath, the deep shade sits behind the headline (bottom left)
-     and fades through the primary blue to the bright blue at the far corner */
+     and fades through the primary colour to the bright shade at the far corner */
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.02  0 0 0 0 0.02  0 0 0 0 0.16  3.4 0 0 0 -1.32'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.15' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.3  0 0 0 0 0.36  0 0 0 0 0.95  0 2.4 0 0 -1.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23d)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23l)'/%3E%3C/svg%3E"),
-    radial-gradient(95% 90% at 26% 96%, #000224 0%, var(--color-primary-deep) 28%, rgba(0, 5, 80, 0.8) 52%, rgba(0, 5, 80, 0) 100%),
-    radial-gradient(70% 70% at 100% 0%, var(--color-primary-bright) 0%, rgba(27, 31, 210, 0) 100%);
+    var(--hero-grain),
+    radial-gradient(95% 90% at 26% 96%, var(--hero-core) 0%, var(--color-primary-deep) 28%, color-mix(in srgb, var(--color-primary-deep) 80%, transparent) 52%, transparent 100%),
+    radial-gradient(70% 70% at 100% 0%, var(--color-primary-bright) 0%, transparent 100%);
   background-size: 300px 300px, cover, cover;
   background-position: 0 0, center, center;
 }
