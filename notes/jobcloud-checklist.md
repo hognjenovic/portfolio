@@ -1,6 +1,6 @@
 # JobCloud case study: open items before publishing
 
-Page: `projects/jobcloud.html` (Job Advisor for jobs.ch).
+Page: `projects/jobcloud.html` (AI assistant for jobs.ch).
 Status: **not ready to publish.** Every screenshot is still a placeholder, and the claims below are unconfirmed.
 
 ## Claims to verify
