@@ -763,9 +763,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .shot--tall { aspect-ratio: 3 / 4; }
 .shot--hero { aspect-ratio: 1344 / 800; border-radius: var(--radius-lg); }
 
-/* Schematic search field and chat bubbles (diagrams, not product screenshots) */
-.mock-field { padding: var(--space-16) var(--space-20); border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-bg); color: var(--color-ink-faint); }
-
+/* Chat bubbles for conversation examples (diagrams, not product screenshots) */
 .bubble { max-width: 85%; padding: var(--space-12) var(--space-16); border-radius: 18px; line-height: 1.3; }
 .bubble--user { align-self: flex-end; border: 1px solid var(--color-line); background: var(--color-bg); color: var(--color-ink); }
 .bubble--assistant { align-self: flex-start; background: var(--color-primary); color: var(--color-on-primary); }
