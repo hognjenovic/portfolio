@@ -659,6 +659,14 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   letter-spacing: var(--tracking-heading);
 }
 
+/* Screen frame: a screenshot with an optional label above and caption below */
+.screen { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; }
+.screen figcaption { line-height: 1.4; }
+.panel.screen figcaption:last-child { color: var(--color-on-primary-soft); }
+.screen--hero { margin-top: var(--tile-gap); }
+.screen img { width: 100%; height: auto; border-radius: var(--radius-sm); }
+.screen--hero img { border-radius: var(--radius-lg); }
+
 /* Screenshot placeholder. Replace with <img src="../assets/jobcloud/file.png" alt="..."> */
 .shot {
   display: grid;
@@ -675,7 +683,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 .shot--wide { aspect-ratio: 16 / 9; }
 .shot--tall { aspect-ratio: 3 / 4; }
-.shot--hero { aspect-ratio: 1344 / 800; border-radius: var(--radius-lg); margin-top: var(--tile-gap); }
+.shot--hero { aspect-ratio: 1344 / 800; border-radius: var(--radius-lg); }
 
 /* Schematic search field and chat bubbles (diagrams, not product screenshots) */
 .mock-field { padding: var(--space-16) var(--space-20); border-radius: var(--radius-sm); background: var(--color-bg); color: var(--color-ink-faint); }

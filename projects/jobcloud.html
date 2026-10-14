@@ -29,19 +29,7 @@
 
   <main class="case__main">
 
-    <!--
-      TO VERIFY BEFORE PUBLISHING
-      1. Source, timeframe and exact definition of the ~68% first-time-query metric.
-      2. Source, definitions and timeframe for 6.7% first-visit and 10.5% return-visit application starts.
-      3. Whether the "a job at Migros" wording appeared in a real test, in the prototype, or is only illustrative
-         (it is labelled "Illustrative example" on the page until confirmed).
-      4. Exact Round 1 findings and exactly what changed between Round 1 and Round 2.
-      5. Which Round 2 expectations were raised by participants and which were identified by the design team.
-      6. Which next actions were present in the tested prototype and which were only proposed.
-      7. Whether screenshots contain information that must be blurred or anonymised.
-      8. Exact ownership boundaries among Hana, PM, engineering and research collaborators.
-      Every dashed box on the page is a placeholder for a real screenshot; add alt text when replacing it.
-    -->
+    <!-- Open items for this page: notes/jobcloud-checklist.md -->
 
     <!-- TITLE, SNAPSHOT, SUMMARY -->
     <section class="case__card">
@@ -59,7 +47,9 @@
     </section>
 
     <!-- VISUAL 1: hero product screen -->
-    <div class="shot shot--hero">Add real screenshot: the assistant’s opening screen with the prompt<br>“Tell me what you’re after—or what you’ve been doing. Whichever is easier.”</div>
+    <figure class="screen screen--hero">
+      <div class="shot shot--hero">Add real screenshot: the assistant’s opening screen with the prompt<br>“Tell me what you’re after—or what you’ve been doing. Whichever is easier.”</div>
+    </figure>
 
     <!-- THE PROBLEM -->
     <section class="case__section">
@@ -91,7 +81,7 @@
           <p>first-visit vs. return-visit application starts</p>
         </div>
       </div>
-      <p class="case__note">Context for the opportunity, not results of the assistant. Internal analysis; definitions and timeframe to be confirmed before publication.</p>
+      <p class="case__note">Source: internal analysis. These figures describe the problem; they are not results of the assistant.</p>
     </section>
 
     <!-- SCOPE -->
@@ -132,32 +122,32 @@
 
       <!-- VISUAL 4: round 1 → design pivot → round 2 -->
       <div class="panels panels--3">
-        <div class="panel">
+        <figure class="panel screen">
           <p class="panel__label">Round 1</p>
           <p class="panel__title">Guided filter modal</p>
           <div class="shot">Add real Round 1 modal screenshot</div>
-          <p>Helpful guidance, but perceived as too similar to filters to meet expectations of AI.</p>
-        </div>
+          <figcaption>Helpful guidance, but perceived as too similar to filters to meet expectations of AI.</figcaption>
+        </figure>
         <div class="panel panel--center">
           <p class="panel__label">Design pivot</p>
           <p class="panel__title panel__title--large">From collecting filter inputs to helping users articulate intent.</p>
         </div>
-        <div class="panel">
+        <figure class="panel screen">
           <p class="panel__label">Round 2</p>
           <p class="panel__title">Dedicated assistant conversation</p>
           <div class="shot">Add real Round 2 assistant screenshot</div>
-          <p>Participants discovered it quickly and understood its purpose before opening it.</p>
-        </div>
+          <figcaption>Participants discovered it quickly and understood its purpose before opening it.</figcaption>
+        </figure>
       </div>
 
-      <!-- VISUAL 5: how the new flow works. Remove any step that was not in the tested prototype. -->
+      <!-- VISUAL 5: how the new flow works -->
       <div class="case__text"><h3>How the new flow works</h3></div>
       <ol class="panels panels--5">
-        <li class="panel"><p class="panel__label">01</p><p class="panel__title">Open prompt</p><div class="shot shot--tall">Add real prototype screen</div></li>
-        <li class="panel"><p class="panel__label">02</p><p class="panel__title">User describes a goal or experience</p><div class="shot shot--tall">Add real prototype screen</div></li>
-        <li class="panel"><p class="panel__label">03</p><p class="panel__title">Assistant asks a focused clarification</p><div class="shot shot--tall">Add real prototype screen</div></li>
-        <li class="panel"><p class="panel__label">04</p><p class="panel__title">Structured criteria build in the background</p><div class="shot shot--tall">Add real prototype screen</div></li>
-        <li class="panel"><p class="panel__label">05</p><p class="panel__title">Job results and next actions</p><div class="shot shot--tall">Add real prototype screen</div></li>
+        <li class="panel"><p class="panel__label">01</p><figure class="screen"><figcaption class="panel__title">Open prompt</figcaption><div class="shot shot--tall">Add real prototype screen: Open prompt</div></figure></li>
+        <li class="panel"><p class="panel__label">02</p><figure class="screen"><figcaption class="panel__title">User describes a goal or experience</figcaption><div class="shot shot--tall">Add real prototype screen: User describes a goal or experience</div></figure></li>
+        <li class="panel"><p class="panel__label">03</p><figure class="screen"><figcaption class="panel__title">Assistant asks a focused clarification</figcaption><div class="shot shot--tall">Add real prototype screen: Assistant asks a focused clarification</div></figure></li>
+        <li class="panel"><p class="panel__label">04</p><figure class="screen"><figcaption class="panel__title">Structured criteria build in the background</figcaption><div class="shot shot--tall">Add real prototype screen: Structured criteria build in the background</div></figure></li>
+        <li class="panel"><p class="panel__label">05</p><figure class="screen"><figcaption class="panel__title">Job results and next actions</figcaption><div class="shot shot--tall">Add real prototype screen: Job results and next actions</div></figure></li>
       </ol>
     </section>
 
@@ -172,8 +162,8 @@
 
       <!-- VISUAL 6: opening before/after -->
       <div class="panels">
-        <div class="panel"><p class="panel__label">Before · Round 1</p><div class="shot shot--wide">Add real Round 1 modal screenshot</div></div>
-        <div class="panel"><p class="panel__label">After · Round 2</p><div class="shot shot--wide">Add real Round 2 opening screen screenshot</div></div>
+        <figure class="panel screen"><figcaption class="panel__label">Before · Round 1 modal</figcaption><div class="shot shot--wide">Add real Round 1 modal screenshot</div></figure>
+        <figure class="panel screen"><figcaption class="panel__label">After · Round 2 opening screen</figcaption><div class="shot shot--wide">Add real Round 2 opening screen screenshot</div></figure>
       </div>
       <p class="case__note">From selecting filters to describing intent.</p>
     </section>
@@ -205,7 +195,10 @@
       </div>
 
       <!-- VISUAL 8: results and next actions -->
-      <div class="shot shot--wide">Add real results screenshot.<br>Annotate: job results, the refine option, and save / alert or another next action only if it is shown in the prototype.</div>
+      <figure class="screen">
+        <div class="shot shot--wide">Add real results screenshot</div>
+        <figcaption class="case__note">Results and the next actions offered in the prototype.</figcaption>
+      </figure>
     </section>
 
     <!-- WHAT TESTING TAUGHT ME -->
