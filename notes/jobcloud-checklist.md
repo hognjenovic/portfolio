@@ -18,15 +18,21 @@ Status: **not ready to publish.** Every screenshot is still a placeholder, and t
 
 Save real screens into `assets/jobcloud/`, replace each placeholder `<div class="shot …">` with an `<img>`, and write alt text from what the screen actually shows. Check every screen for personal or confidential data that needs blurring or anonymising first.
 
-| # | Where on the page | Screen needed |
+Numbers match the "Image N" labels shown on the page, in reading order.
+
+| Image | Where on the page | Screen needed |
 |---|---|---|
 | 1 | Below the title card | Assistant opening screen with the prompt "Tell me what you're after—or what you've been doing. Whichever is easier." |
-| 4a | Research and iteration, left panel | Round 1 guided filter modal |
-| 4b | Research and iteration, right panel | Round 2 dedicated assistant conversation |
-| 5.1–5.5 | How the new flow works | One prototype screen per step: open prompt; user describes a goal or experience; focused clarification; structured criteria building; results and next actions |
-| 6a | Decision 1, left | Round 1 modal (may reuse 4a) |
-| 6b | Decision 1, right | Round 2 opening screen (may reuse 1) |
-| 8 | Decision 3 | Results screen. Add up to three annotations: job results, the refine option, and save/alert only if it is shown in the prototype |
+| 2 | Research and iteration, left panel | Round 1 guided filter modal |
+| 3 | Research and iteration, right panel | Round 2 dedicated assistant conversation |
+| 4 | How the new flow works, step 01 | Open prompt |
+| 5 | How the new flow works, step 02 | User describes a goal or experience |
+| 6 | How the new flow works, step 03 | Assistant asks a focused clarification |
+| 7 | How the new flow works, step 04 | Structured criteria build in the background |
+| 8 | How the new flow works, step 05 | Job results and next actions |
+| 9 | Decision 1, left | Round 1 modal (may be the same file as image 2) |
+| 10 | Decision 1, right | Round 2 opening screen (may be the same file as image 1) |
+| 11 | Decision 3 | Results screen. Add up to three annotations: job results, the refine option, and save/alert only if it is shown in the prototype |
 
 ## Anonymisation
 

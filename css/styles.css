@@ -681,6 +681,9 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   text-align: center;
 }
 
+/* Number label so a placeholder can be referred to as "Image 3" */
+.shot__num { display: block; margin-bottom: var(--space-4); color: var(--color-on-primary); font-weight: var(--weight-medium); }
+
 .shot--wide { aspect-ratio: 16 / 9; }
 .shot--tall { aspect-ratio: 3 / 4; }
 .shot--hero { aspect-ratio: 1344 / 800; border-radius: var(--radius-lg); }
