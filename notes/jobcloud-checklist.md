@@ -7,7 +7,8 @@ Status: **not ready to publish.** Every screenshot is still a placeholder, and t
 
 - [ ] **~68% figure:** source, timeframe, and exact definition of "vague, empty, or overly broad first-time queries".
 - [ ] **6.7% and 10.5% figures:** source, definitions, and timeframe for first-visit and return-visit application starts. Then replace the page note "Source: internal analysis" with the confirmed source.
-- [ ] **Ownership:** exact boundaries between my work and the PM, engineering, and research collaborators. Check the Team fact and every "I" / "we" sentence against them.
+- [x] **Ownership:** clarified. I designed the experience end to end, with the focus on the UI and shaping the assistant's responses (Scope section updated 14 Oct 2026). Still check the Team fact and the remaining "I" / "we" sentences read consistently with this.
+- [ ] **Scope diagram:** confirm that all four stages (capture intent, deliver useful results, save intent / create an alert, build continuity over time) were part of the design, since the page now presents them as designed end to end. Decision 3 still calls some result actions "proposed".
 - [ ] **Migros example:** did "I want a job at Migros" / "What kind of role would you like there?" appear in a real test, in the prototype, or only as an illustration? It is labelled "Illustrative example" on the page until confirmed.
 - [ ] **Round 1 → Round 2:** the exact Round 1 findings and exactly what changed between rounds.
 - [ ] **Round 2 expectations:** which were raised by participants and which were identified by the design team ("What testing taught me" and visual 9).
