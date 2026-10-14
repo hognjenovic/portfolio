@@ -51,7 +51,7 @@
 
     .demo { margin-bottom: var(--space-48); }
     .demo__label { display: block; margin-bottom: var(--space-12); color: var(--color-ink-soft); line-height: 1.5; }
-    .demo--case { padding: var(--space-16); border-radius: var(--radius-lg); background: var(--color-primary); color: var(--color-on-primary); }
+    .demo--case { padding: var(--space-16); border: 1px solid var(--color-line); border-radius: var(--radius-lg); background: linear-gradient(var(--color-primary) 160px, var(--color-bg) 160px); }
     .demo--case .case__body { padding: var(--space-48) var(--space-16) var(--space-16); }
     .demo--case .case__media--wide { aspect-ratio: 1344 / 845; }
     .demo--onprimary { padding: var(--space-30); border-radius: var(--radius-lg); background: var(--color-primary-bright); color: var(--color-on-primary); }
@@ -94,7 +94,7 @@
           <li><div class="swatch__chip" style="background: var(--color-primary-tint)"></div><div class="swatch__meta"><span class="swatch__name">Primary tint · #F5F5FF</span><code>--color-primary-tint</code><span class="swatch__use">Tile backgrounds</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-ink)"></div><div class="swatch__meta"><span class="swatch__name">Ink · #0A0A0A</span><code>--color-ink</code><span class="swatch__use">Body text, titles</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-ink-soft)"></div><div class="swatch__meta"><span class="swatch__name">Ink soft · #333333</span><code>--color-ink-soft</code><span class="swatch__use">Secondary text in lists</span></div></li>
-          <li><div class="swatch__chip" style="background: var(--color-ink-faint)"></div><div class="swatch__meta"><span class="swatch__name">Ink faint · #8F8F8F</span><code>--color-ink-faint</code><span class="swatch__use">Fact labels on case studies</span></div></li>
+          <li><div class="swatch__chip" style="background: var(--color-ink-faint)"></div><div class="swatch__meta"><span class="swatch__name">Ink faint · #6B6B6B</span><code>--color-ink-faint</code><span class="swatch__use">Fact labels, notes and captions</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-muted)"></div><div class="swatch__meta"><span class="swatch__name">Muted · #B8B8B8</span><code>--color-muted</code><span class="swatch__use">Inactive controls</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-line)"></div><div class="swatch__meta"><span class="swatch__name">Line · #EBEBEB</span><code>--color-line</code><span class="swatch__use">Dividers</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-bg)"></div><div class="swatch__meta"><span class="swatch__name">Background · #FFFFFF</span><code>--color-bg</code><span class="swatch__use">Page</span></div></li>
@@ -232,7 +232,7 @@
         </div>
 
         <div class="demo">
-          <span class="demo__label">Case study card · <code>.case__card</code> on the primary blue</span>
+          <span class="demo__label">Case study card · <code>.case__card</code></span>
           <div class="demo--case">
             <section class="case__card">
               <h3 class="case__title">Project</h3>
@@ -245,7 +245,7 @@
               <p class="case__intro">A short introduction to the project sits here.</p>
             </section>
             <figure class="case__media case__media--wide"><div class="case__ph">Visual placeholder</div></figure>
-            <div class="case__body"><section><h2>Section label</h2><p>Section text, in soft white on the blue page.</p></section></div>
+            <div class="case__body"><section><h2>Section label</h2><p>Section text, in dark grey on the white page.</p></section></div>
           </div>
         </div>
 
