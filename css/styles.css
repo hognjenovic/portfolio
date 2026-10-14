@@ -15,6 +15,8 @@
   /* Large type only (24px and up): titles, section headings, metrics, quotes.
      May be lighter than --color-primary, since large text needs 3:1 instead of 4.5:1. */
   --color-display: #000bab;
+  /* Small highlights: brand marker, section heading bars, key numbers */
+  --color-highlight: #000bab;
   --color-ink: #0a0a0a;
   --color-ink-soft: #333333;
   --color-ink-faint: #6b6b6b;
@@ -94,16 +96,18 @@
   --color-primary-deep: #050505;
   --color-primary-tint: #f3f3f1;
   --color-display: #1a1a1a;
+  --color-highlight: #1a1a1a;
   --hero-core: #000000;
   --hero-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  3.4 0 0 0 -1.32'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.15' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.48  0 1.9 0 0 -1.02'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23d)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23l)'/%3E%3C/svg%3E");
 }
 
-/* JobCloud brand details on the neutral shell: Raspberry for large type and the marker,
-   Blackberry for small accent text and highlighted blocks, neutral grey panels */
+/* JobCloud brand details on the neutral shell: Blackberry for headings, accent text and
+   highlighted blocks; Raspberry as the highlight (marker, heading bars, key numbers) */
 .theme-jobcloud {
   --color-primary: #321e50;
   --color-primary-tint: #f3f3f1;
-  --color-display: #fa463c;
+  --color-display: #321e50;
+  --color-highlight: #fa463c;
 }
 
 /* Breakpoints: phone up to 809px, tablet 810-1199px, desktop from 1200px */
@@ -614,7 +618,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   height: 10px;
   margin-right: var(--space-10);
   border-radius: 50%;
-  background: var(--color-display);
+  background: var(--color-highlight);
 }
 
 .case__eyebrow {
@@ -636,6 +640,17 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .case__section--sub { padding-top: var(--space-64); }
 
 .case__text { max-width: 660px; }
+
+/* Short highlight bar above each section heading */
+.case__text h2::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 4px;
+  margin-bottom: var(--space-20);
+  border-radius: 2px;
+  background: var(--color-highlight);
+}
 
 .case__text h2 {
   margin-bottom: var(--space-24);
@@ -710,7 +725,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .panel__title--large { color: var(--color-display); font-size: var(--text-h3); font-weight: var(--weight-regular); line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); }
 
 .metric__value {
-  color: var(--color-display);
+  color: var(--color-highlight);
   font-size: var(--text-h1);
   font-weight: var(--weight-semibold);
   line-height: var(--leading-h1);
@@ -732,7 +747,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   align-items: center;
   aspect-ratio: 4 / 3;
   padding: var(--space-24);
-  border: 1px dashed rgba(0, 11, 171, 0.35);
+  border: 1px dashed color-mix(in srgb, var(--color-primary) 35%, transparent);
   border-radius: var(--radius-sm);
   background: var(--color-bg);
   color: var(--color-ink-faint);
