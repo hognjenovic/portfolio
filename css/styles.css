@@ -80,6 +80,8 @@
   --gutter: 48px;
   /* Widest the case study content gets; wider screens add margin instead */
   --content-max: 1200px;
+  /* Widest the case study title card gets */
+  --card-max: 1344px;
   --section-gap: 120px;
   --block-gap: 180px;
   --tile-height: 128px;
@@ -507,13 +509,15 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 /* Blue band behind the top bar and the whole title card; the page below is white for reading */
 .case__top {
   margin: 0 calc(-1 * var(--gutter)) var(--space-48);
-  /* Full-bleed band; the card inside spans the full width like the nav bar */
+  /* Full-bleed band; the card inside is capped at --card-max and centred */
   padding: var(--case-top) var(--gutter) var(--space-48);
   background: var(--color-shell);
 }
 
 /* White card: title, project facts, intro */
 .case__card {
+  max-width: var(--card-max);
+  margin-inline: auto;
   padding: var(--space-48);
   border-radius: var(--radius-lg);
   background: var(--color-bg);
