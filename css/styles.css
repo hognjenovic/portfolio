@@ -507,8 +507,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 /* Blue band behind the top bar and the whole title card; the page below is white for reading */
 .case__top {
   margin: 0 calc(-1 * var(--gutter)) var(--space-48);
-  /* Full-bleed band; the card inside is capped at --content-max and centred */
-  padding: var(--case-top) max(var(--gutter), (100% - var(--content-max)) / 2 + var(--gutter)) var(--space-48);
+  /* Full-bleed band; the card inside spans the full width like the nav bar */
+  padding: var(--case-top) var(--gutter) var(--space-48);
   background: var(--color-shell);
 }
 
