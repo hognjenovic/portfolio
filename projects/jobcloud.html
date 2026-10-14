@@ -212,16 +212,16 @@
 
       <!-- VISUAL 9: what worked / what needed refinement -->
       <div class="panels">
-        <div class="panel">
+        <div class="panel panel--active">
           <p class="panel__title">What participants valued</p>
-          <ul>
+          <ul class="chips chips--done">
             <li>Expressing detailed needs in natural language</li>
             <li>Discovering related roles and alternative titles</li>
           </ul>
         </div>
         <div class="panel">
           <p class="panel__title">What they expected next</p>
-          <ul>
+          <ul class="chips chips--next">
             <li>Preserve conversation and search state</li>
             <li>Keep original job-ad content available</li>
             <li>Support multi-select where useful</li>
@@ -261,7 +261,13 @@
     </section>
 
     <nav class="case__next" aria-label="Next project">
-      <a href="wingman-ai.html">Wingman AI ›</a>
+      <a class="work-row" href="wingman-ai.html">
+        <span class="work-row__text">
+          <span class="work-row__label">Next project</span>
+          <span class="work-row__name">Wingman AI</span>
+        </span>
+        <span class="work-row__name" aria-hidden="true">→</span>
+      </a>
     </nav>
 
   </main>
