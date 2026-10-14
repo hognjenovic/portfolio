@@ -78,6 +78,8 @@
 
   /* Layout */
   --gutter: 48px;
+  /* Widest the case study content gets; wider screens add margin instead */
+  --content-max: 1200px;
   --section-gap: 120px;
   --block-gap: 180px;
   --tile-height: 128px;
@@ -492,18 +494,20 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .case__bar {
   position: absolute;
   inset: 0 0 auto 0;
-  padding: var(--space-24) var(--gutter) 0;
+  padding: var(--space-24) max(var(--gutter), (100% - var(--content-max)) / 2) 0;
   color: var(--color-on-primary);
 }
 
 .case__bar .hero__role { display: block; }
 
 .case__main { padding: 0 var(--gutter); }
+.case__main > :not(.case__top) { max-width: var(--content-max); margin-inline: auto; }
 
 /* Blue band behind the top bar and the whole title card; the page below is white for reading */
 .case__top {
   margin: 0 calc(-1 * var(--gutter)) var(--space-48);
-  padding: var(--case-top) var(--gutter) var(--space-48);
+  /* Full-bleed band; the card inside is capped at --content-max and centred */
+  padding: var(--case-top) max(var(--gutter), (100% - var(--content-max)) / 2 + var(--gutter)) var(--space-48);
   background: var(--color-shell);
 }
 
