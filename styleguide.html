@@ -50,6 +50,9 @@
     .radii div { width: 160px; height: 110px; margin-bottom: var(--space-10); background: var(--color-primary-tint); border: 1px solid var(--color-line); }
 
     .demo { margin-bottom: var(--space-48); }
+    .sg-sub { margin: var(--space-48) 0 var(--space-12); font-size: var(--text-label); font-weight: var(--weight-regular); color: var(--color-ink); }
+    .sg-dots { display: inline-flex; gap: 4px; }
+    .sg-dots i { width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--color-line); }
     .demo__label { display: block; margin-bottom: var(--space-12); color: var(--color-ink-soft); line-height: 1.5; }
     .demo--case { padding: var(--space-16); border: 1px solid var(--color-line); border-radius: var(--radius-lg); background: var(--color-bg); }
     .demo--case .case__card { border: 1px solid var(--color-line); margin-bottom: var(--space-16); }
@@ -100,6 +103,13 @@
           <li><div class="swatch__chip" style="background: var(--color-line)"></div><div class="swatch__meta"><span class="swatch__name">Line · #EBEBEB</span><code>--color-line</code><span class="swatch__use">Dividers</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-bg)"></div><div class="swatch__meta"><span class="swatch__name">Background · #FFFFFF</span><code>--color-bg</code><span class="swatch__use">Page</span></div></li>
           <li><div class="swatch__chip" style="background: var(--color-on-primary-soft)"></div><div class="swatch__meta"><span class="swatch__name">On primary soft · #EDEDED</span><code>--color-on-primary-soft</code><span class="swatch__use">Secondary text on blue</span></div></li>
+        </ul>
+        <h3 class="sg-sub">Themes</h3>
+        <p class="sg-note">Pages swap the accent colours with a class on <code>&lt;body&gt;</code>. Each theme sets a primary colour for small text and filled surfaces, a display colour for type 24px and larger, and a pale tint for panels.</p>
+        <ul class="records">
+          <li><span class="records__name"><code>.theme-neutral</code></span><span class="records__for">Homepage and 404 · #1A1A1A, tint #F3F3F1</span><span class="records__year"><span class="sg-dots"><i style="background:#1a1a1a"></i><i style="background:#f3f3f1"></i></span></span></li>
+          <li><span class="records__name"><code>.theme-jobcloud</code></span><span class="records__for">Blackberry #321E50 · Raspberry #FA463C (large type) · tint #FFF3EE</span><span class="records__year"><span class="sg-dots"><i style="background:#321e50"></i><i style="background:#fa463c"></i><i style="background:#fff3ee"></i></span></span></li>
+          <li><span class="records__name">Default (no class)</span><span class="records__for">Blue #000BAB · tint #F5F5FF · used by Wingman AI and Grape until they get themes</span><span class="records__year"><span class="sg-dots"><i style="background:#000bab"></i><i style="background:#f5f5ff"></i></span></span></li>
         </ul>
       </div>
     </section>

@@ -12,6 +12,9 @@
   --hero-core: #000224;
   --hero-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.02  0 0 0 0 0.02  0 0 0 0 0.16  3.4 0 0 0 -1.32'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.15' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.3  0 0 0 0 0.36  0 0 0 0 0.95  0 2.4 0 0 -1.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23d)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23l)'/%3E%3C/svg%3E");
   --color-primary-tint: #f5f5ff;
+  /* Large type only (24px and up): titles, section headings, metrics, quotes.
+     May be lighter than --color-primary, since large text needs 3:1 instead of 4.5:1. */
+  --color-display: #000bab;
   --color-ink: #0a0a0a;
   --color-ink-soft: #333333;
   --color-ink-faint: #6b6b6b;
@@ -90,8 +93,19 @@
   --color-primary-bright: #3d3d3b;
   --color-primary-deep: #050505;
   --color-primary-tint: #f3f3f1;
+  --color-display: #1a1a1a;
   --hero-core: #000000;
   --hero-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='d'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  3.4 0 0 0 -1.32'/%3E%3C/filter%3E%3Cfilter id='l'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.15' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.48  0 1.9 0 0 -1.02'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23d)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23l)'/%3E%3C/svg%3E");
+}
+
+/* JobCloud brand: Blackberry for small text and surfaces, Raspberry for large type,
+   a pale peach tint for panels */
+.theme-jobcloud {
+  --color-primary: #321e50;
+  --color-primary-bright: #321e50;
+  --color-primary-deep: #1e1230;
+  --color-primary-tint: #fff3ee;
+  --color-display: #fa463c;
 }
 
 /* Breakpoints: phone up to 809px, tablet 810-1199px, desktop from 1200px */
@@ -492,7 +506,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 }
 
 .case__title {
-  color: var(--color-primary);
+  color: var(--color-display);
   font-size: var(--text-case-title);
   font-weight: var(--weight-medium);
   line-height: 0.9;
@@ -611,7 +625,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 .case__text h2 {
   margin-bottom: var(--space-24);
-  color: var(--color-primary);
+  color: var(--color-display);
   font-size: var(--text-h3);
   font-weight: var(--weight-regular);
   line-height: var(--leading-heading);
@@ -647,7 +661,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .case__quote {
   max-width: 24em;
   margin: 0;
-  color: var(--color-primary);
+  color: var(--color-display);
   font-size: var(--text-h3);
   font-weight: var(--weight-regular);
   line-height: var(--leading-heading);
@@ -679,10 +693,10 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .panel__label { color: var(--color-primary); font-weight: var(--weight-regular); letter-spacing: var(--tracking-label); }
 .panel--active .panel__label { color: var(--color-on-primary); }
 .panel__title { color: var(--color-ink); font-size: 20px; font-weight: var(--weight-medium); line-height: 1.3; }
-.panel__title--large { color: var(--color-primary); font-size: var(--text-h3); font-weight: var(--weight-regular); line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); }
+.panel__title--large { color: var(--color-display); font-size: var(--text-h3); font-weight: var(--weight-regular); line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); }
 
 .metric__value {
-  color: var(--color-primary);
+  color: var(--color-display);
   font-size: var(--text-h1);
   font-weight: var(--weight-semibold);
   line-height: var(--leading-h1);
