@@ -15,7 +15,7 @@
   /* Large type only (24px and up): titles, section headings, metrics, quotes.
      May be lighter than --color-primary, since large text needs 3:1 instead of 4.5:1. */
   --color-display: #000bab;
-  /* Small highlights: brand marker, section heading bars, key numbers */
+  /* Small highlights: section heading bars, key numbers */
   --color-highlight: #000bab;
   --color-ink: #0a0a0a;
   --color-ink-soft: #333333;
@@ -104,7 +104,7 @@
 }
 
 /* JobCloud brand details on the neutral shell: Blackberry for headings, accent text and
-   highlighted blocks; Raspberry as the highlight (marker, heading bars, key numbers) */
+   highlighted blocks; Raspberry as the highlight (heading bars, key numbers) */
 .theme-jobcloud {
   --color-primary: #321e50;
   --color-primary-tint: #f3f3f1;
@@ -613,17 +613,6 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 }
 
 /* ---------- Long-form case study blocks ---------- */
-/* The small dot is the page's brand marker */
-.case__eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-right: var(--space-10);
-  border-radius: 50%;
-  background: var(--color-highlight);
-}
-
 .case__eyebrow {
   margin-bottom: var(--space-24);
   color: var(--color-ink-faint);
