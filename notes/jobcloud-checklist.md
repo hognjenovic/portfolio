@@ -29,7 +29,7 @@ Numbers match the "Image N" labels shown on the page, in reading order.
 | 4 | How the new flow works, step 01 | Open prompt |
 | 5 | How the new flow works, step 02 | User describes a goal or experience |
 | 6 | How the new flow works, step 03 | Assistant asks a focused clarification |
-| 7 | How the new flow works, step 04 | Structured criteria build in the background |
+| 7 | How the new flow works, step 04 | Follow-up questions narrow the search (placed: location question, 16 Oct 2026) |
 | 8 | How the new flow works, step 05 | Job results and next actions |
 | 9 | Decision 1, left | Round 1 modal (may be the same file as image 2) |
 | 10 | Decision 1, right | Round 2 opening screen (may be the same file as image 1) |
@@ -38,3 +38,11 @@ Numbers match the "Image N" labels shown on the page, in reading order.
 ## Anonymisation
 
 - [ ] Check every screenshot for names, CVs, email addresses, internal URLs, and unreleased business data.
+
+## Screenshots placed 16 Oct 2026
+
+- [x] **Version:** confirmed 16 Oct 2026: all shared screenshots and the screen recording show the Round 2 prototype.
+- [ ] **Result actions:** the next-actions screenshot (Image 11) shows refine, keep me posted, broaden, which fits best, career change and salary. Decision 3 still calls these "proposed". Update the wording if they were in the tested prototype.
+- [ ] **Job cards:** Image 8 shows real employers and a job reference (Humanis AG [A015449], yellowshark, Swissphone Wireless AG). Fine if public listings; otherwise blur.
+- [x] **Round 1 and Image 10:** placed 16 Oct 2026. Image 2 is step 1 of the Round 1 modal, Image 9 shows all four modal steps, Image 10 reuses the Round 2 opening screen. Every placeholder is now filled.
+- Conversation history sidebar and rename/delete menu placed 16 Oct 2026 after "How the new flow works" (card text: "Earlier conversations stay within reach."). Still unused: edit-a-previous-answer.

@@ -747,12 +747,21 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   letter-spacing: var(--tracking-heading);
 }
 
+/* Caption under a metric or scope number: reading size, like the case study text */
+.metric__value + p { font-size: var(--text-reading); line-height: 1.45; }
+
 /* Screen frame: a screenshot with an optional label above and caption below */
 .screen { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; }
 .screen figcaption { line-height: 1.4; }
 .panel.screen figcaption:last-child { color: var(--color-ink-soft); }
 .screen img { width: 100%; height: auto; border: 1px solid var(--color-line); border-radius: var(--radius-sm); }
 .screen--hero img { border-radius: var(--radius-lg); }
+/* Screenshot in a white frame with even padding. Inside a panel the frame grows to the panel's height,
+   so neighbouring frames match; the image keeps its scale and sits centred */
+.screen img.shot-img { flex: 1; padding: var(--space-24); object-fit: contain; background: var(--color-bg); }
+.panel > .screen { flex: 1; }
+/* A single screenshot on its own: capped so its text doesn't show far larger than the page text */
+.screen--narrow { max-width: 880px; }
 
 /* Screenshot placeholder. Replace with <img src="../assets/jobcloud/file.png" alt="..."> */
 .shot {
@@ -805,6 +814,9 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   .case__title--long { font-size: 56px; }
   .case__facts--six { grid-template-columns: repeat(2, 1fr); }
   .panels--3 { grid-template-columns: 1fr; }
+  /* Text card on top, two screenshots side by side below */
+  .panels--3.panels--lead { grid-template-columns: repeat(2, 1fr); }
+  .panels--lead > :first-child { grid-column: 1 / -1; }
   .panels--4, .panels--5 { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -815,7 +827,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   .case__intro--lead { font-size: 18px; }
   .case__section--sub { padding-top: var(--space-48); }
   .case__text h3 { font-size: 20px; }
-  .panels, .panels--4, .panels--5 { grid-template-columns: 1fr; }
+  .panels, .panels--4, .panels--5, .panels--3.panels--lead { grid-template-columns: 1fr; }
+  .panels--lead img.shot-img { max-width: 420px; }
   .panel { padding: var(--space-20) var(--space-16); }
   .shot--tall { aspect-ratio: 4 / 3; }
 }

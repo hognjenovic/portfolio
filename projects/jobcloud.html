@@ -50,7 +50,7 @@
 
     <!-- VISUAL 1: hero product screen -->
     <figure class="screen screen--hero">
-      <div class="shot shot--hero"><span class="shot__num">Image 1</span>Add real screenshot: the assistant’s opening screen with the prompt<br>“Tell me what you’re after—or what you’ve been doing. Whichever is easier.”</div>
+      <img src="../assets/jobcloud/opening-page.png" width="2688" height="1450" alt="The jobs.ch AI Assistant opening screen: the main navigation with the AI Assistant tab selected, a single prompt, “Hello! Tell me what you’re after, or what you’ve been doing. Whichever is easier.”, and an empty message field.">
     </figure>
 
     <!-- THE PROBLEM -->
@@ -119,7 +119,7 @@
         <figure class="panel screen">
           <p class="panel__label">Round 1</p>
           <p class="panel__title">Guided filter modal</p>
-          <div class="shot"><span class="shot__num">Image 2</span>Add real Round 1 modal screenshot</div>
+          <img class="shot-img" src="../assets/jobcloud/round1-modal-step1.png" width="798" height="664" alt="Round 1 AI Assistant modal, step 1 of 4: “Which job are you looking for?” with a job title field containing “designer” and a Next button." loading="lazy">
           <figcaption>Helpful guidance, but perceived as too similar to filters to meet expectations of AI.</figcaption>
         </figure>
         <div class="panel panel--center">
@@ -129,7 +129,7 @@
         <figure class="panel screen">
           <p class="panel__label">Round 2</p>
           <p class="panel__title">Dedicated assistant conversation</p>
-          <div class="shot"><span class="shot__num">Image 3</span>Add real Round 2 assistant screenshot</div>
+          <img class="shot-img" src="../assets/jobcloud/opening-screen.png" width="1619" height="1622" alt="jobs.ch with an AI Assistant tab next to Job search in the main navigation, open on the assistant’s opening prompt and message field." loading="lazy">
           <figcaption>Participants discovered it quickly and understood its purpose before opening it.</figcaption>
         </figure>
       </div>
@@ -137,12 +137,29 @@
       <!-- VISUAL 5: how the new flow works -->
       <div class="case__text case__text--heading"><h3>How the new flow works</h3></div>
       <ol class="panels">
-        <li class="panel"><p class="panel__label">01</p><figure class="screen"><figcaption class="panel__title">Open prompt</figcaption><div class="shot shot--tall"><span class="shot__num">Image 4</span>Add real prototype screen: Open prompt</div></figure></li>
-        <li class="panel"><p class="panel__label">02</p><figure class="screen"><figcaption class="panel__title">User describes a goal or experience</figcaption><div class="shot shot--tall"><span class="shot__num">Image 5</span>Add real prototype screen: User describes a goal or experience</div></figure></li>
-        <li class="panel"><p class="panel__label">03</p><figure class="screen"><figcaption class="panel__title">Assistant asks a focused clarification</figcaption><div class="shot shot--tall"><span class="shot__num">Image 6</span>Add real prototype screen: Assistant asks a focused clarification</div></figure></li>
-        <li class="panel"><p class="panel__label">04</p><figure class="screen"><figcaption class="panel__title">Structured criteria build in the background</figcaption><div class="shot shot--tall"><span class="shot__num">Image 7</span>Add real prototype screen: Structured criteria build in the background</div></figure></li>
-        <li class="panel"><p class="panel__label">05</p><figure class="screen"><figcaption class="panel__title">Job results and next actions</figcaption><div class="shot shot--tall"><span class="shot__num">Image 8</span>Add real prototype screen: Job results and next actions</div></figure></li>
+        <li class="panel"><p class="panel__label">01</p><figure class="screen"><figcaption class="panel__title">Open prompt</figcaption><img class="shot-img" src="../assets/jobcloud/step-open-prompt.png" width="1500" height="1336" alt="The opening prompt: “Hello! Tell me what you’re after, or what you’ve been doing. Whichever is easier.” above an empty message field." loading="lazy"></figure></li>
+        <li class="panel"><p class="panel__label">02</p><figure class="screen"><figcaption class="panel__title">User describes a goal or experience</figcaption><img class="shot-img" src="../assets/jobcloud/step-describe.png" width="1464" height="615" alt="The user writes that they have done UX/UI work for a few years and are unsure whether to move toward Product Designer or Product Manager; the assistant acknowledges both directions." loading="lazy"></figure></li>
+        <li class="panel"><p class="panel__label">03</p><figure class="screen"><figcaption class="panel__title">Assistant asks a focused clarification</figcaption><img class="shot-img" src="../assets/jobcloud/step-clarify.png" width="1464" height="1153" alt="The assistant asks whether design craft or product ownership feels more appealing, with answer options, a note that the user can type their own answer, and a Skip this question link." loading="lazy"></figure></li>
+        <li class="panel"><p class="panel__label">04</p><figure class="screen"><figcaption class="panel__title">Follow-up questions narrow the search</figcaption><img class="shot-img" src="../assets/jobcloud/step-follow-up.png" width="1464" height="838" alt="The assistant notes the user is flexible on language and asks where in Switzerland they would like to work, with options for Zurich, Bern and Basel, Lausanne and Geneva, or describing it in their own words, plus a Skip this question link." loading="lazy"></figure></li>
+        <li class="panel"><p class="panel__label">05</p><figure class="screen"><figcaption class="panel__title">Job results and next actions</figcaption><img class="shot-img" src="../assets/jobcloud/step-results.png" width="1464" height="995" alt="The assistant explains that the roles found around Zurich lean toward engineering and product management, followed by three job cards and buttons to show more jobs or view all in job search." loading="lazy"></figure></li>
       </ol>
+
+      <!-- VISUAL 5b: conversation history -->
+      <div class="panels panels--3 panels--lead">
+        <div class="panel panel--center">
+          <p class="panel__label">Conversation history</p>
+          <p class="panel__title panel__title--large">Earlier conversations stay within reach.</p>
+          <p>A side panel lists recent conversations. Users can start a new one, or rename and delete earlier ones.</p>
+        </div>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Recent conversations</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/history.png" width="512" height="770" alt="Side panel with a New conversation button and a Recent list: UX designer roles in Zurich, salary range for product roles, part-time marketing jobs, companies hiring data roles, remote frontend positions, switching from agency." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Rename or delete</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/history-menu.png" width="512" height="770" alt="The same side panel with the menu of the first conversation open, offering Rename and Delete." loading="lazy">
+        </figure>
+      </div>
     </section>
 
     <!-- KEY DESIGN DECISIONS -->
@@ -156,8 +173,8 @@
 
       <!-- VISUAL 6: opening before/after -->
       <div class="panels">
-        <figure class="panel screen"><figcaption class="panel__label">Before · Round 1 modal</figcaption><div class="shot shot--wide"><span class="shot__num">Image 9</span>Add real Round 1 modal screenshot</div></figure>
-        <figure class="panel screen"><figcaption class="panel__label">After · Round 2 opening screen</figcaption><div class="shot shot--wide"><span class="shot__num">Image 10</span>Add real Round 2 opening screen screenshot</div></figure>
+        <figure class="panel screen"><figcaption class="panel__label">Before · Round 1 modal</figcaption><img class="shot-img" src="../assets/jobcloud/round1-modal-steps.png" width="1614" height="1511" alt="The four steps of the Round 1 modal: job title, workload percentage, contract type, and language, each with a progress bar and Next or Show jobs." loading="lazy"></figure>
+        <figure class="panel screen"><figcaption class="panel__label">After · Round 2 opening screen</figcaption><img class="shot-img" src="../assets/jobcloud/opening-screen.png" width="1619" height="1622" alt="The Round 2 assistant opening screen: a single prompt, “Hello! Tell me what you’re after, or what you’ve been doing. Whichever is easier.”, above a message field." loading="lazy"></figure>
       </div>
       <p class="case__note">From selecting filters to describing intent.</p>
     </section>
@@ -189,9 +206,9 @@
       </div>
 
       <!-- VISUAL 8: results and next actions -->
-      <figure class="screen">
-        <div class="shot shot--wide"><span class="shot__num">Image 11</span>Add real results screenshot</div>
-        <figcaption class="case__note">Results and the next actions offered in the prototype.</figcaption>
+      <figure class="screen screen--narrow">
+        <img class="shot-img" src="../assets/jobcloud/next-actions.png" width="1464" height="937" alt="Next-step options after the results: refine results further, keep me posted about new matches, broaden the search, ask which roles fit best, explore a career change, or check a salary." loading="lazy">
+        <figcaption class="case__note">Next actions offered after the results in the prototype.</figcaption>
       </figure>
     </section>
 
