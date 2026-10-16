@@ -173,6 +173,14 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   * { transition: none !important; }
 }
 
+/* Scroll reveal: js/main.js adds .reveal, then .is-revealed when the element enters the view */
+.reveal { opacity: 0; }
+.reveal.is-revealed { animation: reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) both; }
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -602,6 +610,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .work-row__label { color: var(--color-ink-soft); line-height: var(--leading-label); letter-spacing: var(--tracking-label); transition: color 0.2s ease; }
 .work-row:hover .work-row__label, .work-row:focus-visible .work-row__label { color: var(--color-on-primary); }
 .work-row--jobcloud:hover .work-row__label, .work-row--jobcloud:focus-visible .work-row__label { color: #1a1a1a; }
+.case__next .work-row > [aria-hidden] { transition: transform 0.3s ease; }
+.case__next .work-row:hover > [aria-hidden], .case__next .work-row:focus-visible > [aria-hidden] { transform: translateX(8px); }
 .case .footer { margin-top: 0; }
 
 @media (max-width: 1199px) {
