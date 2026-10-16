@@ -39,6 +39,14 @@ function revealOnScroll() {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("is-revealed");
       observer.unobserve(entry.target);
+      // Once shown, drop the animation so it no longer pins opacity and transform (hover states need them)
+      const done = (event) => {
+        if (event.target !== entry.target) return;
+        entry.target.removeEventListener("animationend", done);
+        entry.target.classList.remove("reveal", "is-revealed");
+        entry.target.style.removeProperty("--reveal-delay");
+      };
+      entry.target.addEventListener("animationend", done);
     });
   }, { rootMargin: "0px 0px -10% 0px" });
 

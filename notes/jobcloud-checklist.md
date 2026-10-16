@@ -23,7 +23,7 @@ Numbers match the "Image N" labels shown on the page, in reading order.
 
 | Image | Where on the page | Screen needed |
 |---|---|---|
-| 1 | Below the title card | Assistant opening screen with the prompt "Tell me what you're after—or what you've been doing. Whichever is easier." |
+| 1 | Below the title card | Removed 16 Oct 2026; the Starting point section (job search page with the AI Assistant tab) now follows the title card |
 | 2 | Research and iteration, left panel | Round 1 guided filter modal |
 | 3 | Research and iteration, right panel | Round 2 dedicated assistant conversation |
 | 4 | How the new flow works, step 01 | Open prompt |
@@ -46,3 +46,4 @@ Numbers match the "Image N" labels shown on the page, in reading order.
 - [ ] **Job cards:** Image 8 shows real employers and a job reference (Humanis AG [A015449], yellowshark, Swissphone Wireless AG). Fine if public listings; otherwise blur.
 - [x] **Round 1 and Image 10:** placed 16 Oct 2026. Image 2 is step 1 of the Round 1 modal, Image 9 shows all four modal steps, Image 10 reuses the Round 2 opening screen. Every placeholder is now filled.
 - Conversation history sidebar and rename/delete menu placed 16 Oct 2026 after "How the new flow works" (card text: "Earlier conversations stay within reach."). Still unused: edit-a-previous-answer.
+- "Starting point" section added 16 Oct 2026 below the top image, from Hana's own wording: the platform kept the familiar search and added the agentic approach as a secondary way in, via a new AI Assistant tab in the central navigation. Visual: full Round 2 job search page with the tab (entry-page.png), full width like the top image.

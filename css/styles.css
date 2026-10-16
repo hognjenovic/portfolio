@@ -220,7 +220,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .hero__role, .hero__contact { font-weight: var(--weight-light); }
 .hero__lead { font-weight: var(--weight-medium); }
 .hero__nav { display: contents; }
-.hero__bar a:hover { opacity: 0.65; }
+.hero__bar a { transition: opacity 0.2s ease; }
+.hero__bar a:hover, .hero__bar a:focus-visible { opacity: 0.65; }
 
 .hero__name {
   /* Sized by width, but capped by height so it still fits on short, wide screens */
@@ -280,7 +281,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   letter-spacing: var(--tracking-label);
 }
 
-.notfound__home:hover { opacity: 0.65; }
+.notfound__home { transition: opacity 0.2s ease; }
+.notfound__home:hover, .notfound__home:focus-visible { opacity: 0.65; }
 
 @media (max-width: 1199px) {
   .notfound__code { font-size: max(40px, min(36.4vw, (100vh - 330px) / 0.8)); font-size: max(40px, min(36.4vw, (100svh - 330px) / 0.8)); }
@@ -465,7 +467,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 .footer__contact a { transition: color 0.2s ease; }
 .footer__contact a:hover { color: var(--color-on-primary); }
-.footer__contact .arrow { font-size: 0.5em; vertical-align: middle; }
+/* Small arrow after a link (footer contacts, next project) */
+.arrow { font-size: 0.5em; vertical-align: middle; }
 
 /* js/main.js scales this line to the full width of the footer */
 .footer__name {
@@ -611,7 +614,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .work-row:hover .work-row__label, .work-row:focus-visible .work-row__label { color: var(--color-on-primary); }
 .work-row--jobcloud:hover .work-row__label, .work-row--jobcloud:focus-visible .work-row__label { color: #1a1a1a; }
 .case__next .work-row > [aria-hidden] { transition: transform 0.3s ease; }
-.case__next .work-row:hover > [aria-hidden], .case__next .work-row:focus-visible > [aria-hidden] { transform: translateX(8px); }
+.case__next .arrow { font-size: 1em; vertical-align: baseline; }
+.case__next .work-row:hover > [aria-hidden], .case__next .work-row:focus-visible > [aria-hidden] { transform: translateX(6px); }
 .case .footer { margin-top: 0; }
 
 @media (max-width: 1199px) {
@@ -645,6 +649,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 .case__section { display: grid; gap: var(--space-48); padding-top: var(--section-gap); }
 .case__section--sub { padding-top: var(--space-64); }
+/* First section after the dark band: same rhythm as between sections (the band already adds 48px below it) */
+.case__top + .case__section { padding-top: calc(var(--section-gap) - var(--space-48)); }
 
 .case__text { max-width: 660px; }
 
