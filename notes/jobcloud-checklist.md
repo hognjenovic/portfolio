@@ -23,7 +23,7 @@ Numbers match the "Image N" labels shown on the page, in reading order.
 
 | Image | Where on the page | Screen needed |
 |---|---|---|
-| 1 | Below the title card | Removed 16 Oct 2026; the Starting point section (job search page with the AI Assistant tab) now follows the title card |
+| 1 | Below the title card | Assistant opening screen with only the prompt (opening-page.png). Starting point follows it |
 | 2 | Research and iteration, left panel | Round 1 guided filter modal |
 | 3 | Research and iteration, right panel | Round 2 dedicated assistant conversation |
 | 4 | How the new flow works, step 01 | Open prompt |
