@@ -22,6 +22,10 @@ Page: `projects/wingman-ai.html`. Source: Hana's earlier portfolio page and the 
 - [ ] **Results:** kept qualitative ("in the app today", "more visible and legible", "internal testing"). No numbers on purpose.
 - [ ] **Status fact:** "Design implemented in the app". Adjust if only part of it shipped.
 
+## Fixed
+
+- [x] Typo "R2 Dxrone" on the new home screen corrected to "R2 Drone" in the image (18 Oct 2026). Fix it in Figma too if the file is reused.
+
 ## Not used yet
 
 - Map views 3–5 (drop pin, offline drone, FPV with mini-map), notification styles overview, notification toasts, gallery photos tab, drone dropdown and more menu.
