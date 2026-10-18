@@ -14,6 +14,6 @@ Page: `projects/grape.html`. Short teaser: Hana will share details directly. Sou
 
 - [ ] **Title:** "From spreadsheets and paper logs to one app for the winery" (derived from the challenge text).
 - [x] **Names:** the company is Grape (Hana, 18 Oct 2026); FullMoon is the product. Homepage row stays "Grape".
-- [ ] **Homepage year:** changed to 2025–2026 to match the old page.
+- [x] **Homepage year:** 2025–2026, matching the old page.
 - [ ] **Mock-up names:** the Warehouse screen shows grower names (Marko Nikolic, Ana Petrovic, Luka Markovic). Confirm these are demo data.
-- [ ] **Theme colour:** page uses the default blue for now. A FullMoon colour (the app is dark green and black) is still to choose.
+- [x] **Theme colour:** black headings and accents (Hana, 18 Oct 2026). A FullMoon brand colour can replace it later.

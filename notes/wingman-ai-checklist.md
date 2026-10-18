@@ -34,4 +34,4 @@ Page: `projects/wingman-ai.html`. Source: Hana's earlier portfolio page and the 
 ## Before publishing
 
 - [x] Theme: black and white from the app's neutral scale (Hana, 18 Oct 2026); homepage row hovers to near-black. Dates on the homepage row corrected to 2024–2025.
-- [ ] Give the "Next project" boxes each project's colours once themes exist (see CLAUDE.md).
+- [x] "Next project" boxes: all hover to the same black as the homepage rows (Hana, 18 Oct 2026).
