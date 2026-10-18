@@ -63,6 +63,7 @@
   /* Spacing scale (named by pixel value) */
   --space-2: 2px;
   --space-4: 4px;
+  --space-8: 8px;
   --space-10: 10px;
   --space-12: 12px;
   --space-16: 16px;
@@ -112,6 +113,22 @@
   --color-primary-tint: #f3f3f1;
   --color-display: #321e50;
   --color-highlight: #fa463c;
+}
+
+/* Grape (FullMoon): black headings and accents on neutral grey cards, until a brand colour is chosen */
+.theme-grape {
+  --color-primary: #0b0b0b;
+  --color-primary-tint: #f3f3f1;
+  --color-display: #0b0b0b;
+  --color-highlight: #0b0b0b;
+}
+
+/* Wingman AI: black and white, from the app's neutral scale (900 #0b0b0b, 100 #efeff0) */
+.theme-wingman {
+  --color-primary: #0b0b0b;
+  --color-primary-tint: #efeff0;
+  --color-display: #0b0b0b;
+  --color-highlight: #0b0b0b;
 }
 
 /* Breakpoints: phone up to 809px, tablet 810-1199px, desktop from 1200px */
@@ -365,6 +382,13 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
    JobCloud: Blackberry name (large text, 4.2:1) and near-black detail line (5:1) on Raspberry */
 .work-row--jobcloud:hover, .work-row--jobcloud:focus-visible { background: #fa463c; color: #321e50; }
 .work-row--jobcloud:hover .work-row__meta, .work-row--jobcloud:focus-visible .work-row__meta { color: #1a1a1a; }
+/* Wingman AI: near-black with white text */
+.work-row--wingman:hover, .work-row--wingman:focus-visible { background: #0b0b0b; color: #ffffff; }
+/* Homepage Selected Works and the case study Next project row: every row hovers to the same black */
+.works .work-row:hover, .works .work-row:focus-visible,
+.case__next .work-row:hover, .case__next .work-row:focus-visible { background: #0b0b0b; color: #ffffff; }
+.works .work-row:hover .work-row__meta, .works .work-row:focus-visible .work-row__meta,
+.case__next .work-row:hover .work-row__label, .case__next .work-row:focus-visible .work-row__label { color: #ffffff; }
 
 /* ---------- Label + content blocks (services, expertise, clients, recognition, about) ---------- */
 .block {
@@ -469,6 +493,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .footer__contact a:hover { color: var(--color-on-primary); }
 /* Small arrow after a link (footer contacts, next project) */
 .arrow { font-size: 0.5em; vertical-align: middle; }
+/* One arrow style everywhere: the → glyph, turned to point down-right next to contact links */
+.arrow--diag { display: inline-block; transform: translate(0.06em, -0.12em) rotate(45deg) scale(1.06); }
 
 /* js/main.js scales this line to the full width of the footer */
 .footer__name {
@@ -608,7 +634,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .case__gallery .case__media--wide { grid-column: 1 / -1; aspect-ratio: 1344 / 845; }
 
 /* Next project: a homepage work row with a small label above the name */
-.case__next { padding: var(--space-48) 0 var(--space-64); }
+.case__next { padding: var(--section-gap) 0 var(--space-64); }
 .work-row__text { display: flex; flex-direction: column; gap: var(--space-4); }
 .work-row__label { color: var(--color-ink-soft); line-height: var(--leading-label); letter-spacing: var(--tracking-label); transition: color 0.2s ease; }
 .work-row:hover .work-row__label, .work-row:focus-visible .work-row__label { color: var(--color-on-primary); }
@@ -701,6 +727,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .case__note { color: var(--color-ink-faint); font-size: 14px; line-height: 1.4; }
 .case__text .case__note { margin-top: 1.5em; color: var(--color-ink-faint); }
 .panels + .case__note { margin-top: calc(var(--space-16) - var(--space-48)); }
+/* Cards that explain the visual right above them (e.g. a legend) sit as close as a caption */
+.panels.panels--attached { margin-top: calc(var(--space-16) - var(--space-48)); }
 
 .case__quote {
   max-width: 24em;
@@ -734,13 +762,16 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   border-radius: var(--radius-lg);
   background: var(--color-primary-tint);
   color: var(--color-ink);
+  /* Card text at reading size, like the running text; labels stay at label size */
+  font-size: var(--text-reading);
+  line-height: 1.45;
 }
 
 .panel--active { background: var(--color-primary); color: var(--color-on-primary); }
 .panel--active p { color: var(--color-on-primary-soft); }
 .panel--center { justify-content: center; }
 
-.panel__label { color: var(--color-primary); font-weight: var(--weight-regular); letter-spacing: var(--tracking-label); }
+.panel__label { color: var(--color-primary); font-size: var(--text-label); font-weight: var(--weight-regular); letter-spacing: var(--tracking-label); }
 .panel--active .panel__label { color: var(--color-on-primary); }
 .panel__title { color: var(--color-ink); font-size: 20px; font-weight: var(--weight-medium); line-height: 1.3; }
 .panel__title--large { color: var(--color-display); font-size: var(--text-h3); font-weight: var(--weight-regular); line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); }
@@ -766,6 +797,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
    so neighbouring frames match; the image keeps its scale and sits centred */
 .screen img.shot-img { flex: 1; padding: var(--space-24); object-fit: contain; background: var(--color-bg); }
 .panel > .screen { flex: 1; }
+/* Wingman AI: dark screens read as their own box, so no white frame around them */
+.theme-wingman .screen img.shot-img { flex: none; padding: 0; border: 0; background: none; border-radius: var(--radius-sm); }
 /* A single screenshot on its own: capped so its text doesn't show far larger than the page text */
 .screen--narrow { max-width: 880px; }
 
@@ -810,6 +843,41 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 }
 .chips--next li::before { content: "+"; font-weight: var(--weight-medium); }
 .panel--active .panel__title { color: var(--color-on-primary); }
+
+/* Zoom view for smaller screenshots (js/main.js) */
+.is-zoomable { cursor: zoom-in; transition: opacity 0.2s ease; }
+.is-zoomable:hover { opacity: 0.9; }
+.zoom {
+  width: 100vw; max-width: 100vw; height: 100vh; height: 100dvh; max-height: 100dvh;
+  margin: 0; padding: var(--gutter); border: 0;
+  background: transparent; cursor: zoom-out;
+}
+.zoom[open] { display: flex; align-items: center; justify-content: center; }
+.zoom::backdrop { background: rgba(10, 10, 10, 0.92); }
+.zoom__img { max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: var(--radius-sm); }
+.zoom__close {
+  position: fixed; top: var(--space-16); right: var(--space-16);
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12); color: #fff; font-size: 28px; line-height: 1;
+}
+.zoom__close:hover { background: rgba(255, 255, 255, 0.22); }
+.is-zoomed { overflow: hidden; }
+@media (prefers-reduced-motion: no-preference) {
+  .zoom[open] .zoom__img { animation: zoom-in 0.25s cubic-bezier(0.22, 1, 0.36, 1); }
+  .zoom[open]::backdrop { animation: fade-in 0.25s ease; }
+}
+@keyframes zoom-in { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* Device mock-up on white: no frame, centred, capped so the phones don't fill the screen */
+.screen--device { align-items: center; }
+.screen--device img { width: 100%; max-width: 760px; border: 0; }
+
+/* Coloured dot before a distance band label (Wingman AI distance sensor) */
+.zone { display: inline-block; width: 0.75em; height: 0.75em; margin-right: 0.5em; border-radius: 50%; vertical-align: -0.05em; }
+.zone--near { background: #e23b2e; }
+.zone--mid { background: #f08a24; }
+.zone--far { background: #4a5ae8; }
 
 /* Chat bubbles for conversation examples (diagrams, not product screenshots) */
 .bubble { max-width: 85%; padding: var(--space-12) var(--space-16); border-radius: 18px; line-height: 1.3; }

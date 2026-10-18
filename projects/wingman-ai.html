@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wingman AI — Hana Ognjenovic</title>
-  <meta name="description" content="Product design for Wingman AI, a startup, in 2025.">
+  <title>Drone control app for Wingman AI — Hana Ognjenovic</title>
+  <meta name="description" content="Case study: redesigning Wingman AI’s drone control app for the Steam Deck, from app audit to developer handoff.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css?v=20261018s">
 </head>
-<body class="case">
+<body class="case theme-wingman">
 
   <header class="case__bar">
     <div class="hero__bar">
@@ -29,49 +29,268 @@
 
   <main class="case__main">
 
-    <!-- TITLE, FACTS, INTRO -->
+    <!-- Open items for this page: notes/wingman-ai-checklist.md -->
+
+    <!-- TITLE, SNAPSHOT, SUMMARY -->
     <div class="case__top">
       <section class="case__card">
-        <h1 class="case__title">Wingman AI</h1>
-        <dl class="case__facts">
-          <div><dt>Scope</dt><dd>[Scope: what you worked on]</dd></div>
-          <div><dt>Client</dt><dd>Wingman AI</dd></div>
-          <div><dt>Year</dt><dd>2025</dd></div>
-          <div><dt>Industry</dt><dd>[Industry]</dd></div>
+        <p class="case__eyebrow">Wingman AI · Drone control app for Steam Deck</p>
+        <h1 class="case__title case__title--long">Designing for the operator’s hands, not just the screen</h1>
+        <dl class="case__facts case__facts--six">
+          <div><dt>Role</dt><dd>Product Designer</dd></div>
+          <div><dt>Team</dt><dd>Worked alongside the Lead Product Designer and the engineering team</dd></div>
+          <div><dt>Scope</dt><dd>App audit, feature mapping, flows, visual design, design system, and developer handoff</dd></div>
+          <div><dt>Timeline</dt><dd>Four months, November 2024 to February 2025</dd></div>
+          <div><dt>Platform</dt><dd>Steam Deck (Linux)</dd></div>
+          <div><dt>Status</dt><dd>Design implemented in the app</dd></div>
         </dl>
-        <p class="case__intro">[Intro: two or three sentences on what the product is, who it serves, and what this project set out to do.]</p>
+        <p class="case__intro case__intro--lead">Wingman AI builds autonomous drones for the defence and security sector that monitor, track, and scan facilities, so teams can collect visual data without putting people in danger. I redesigned the app operators use to fly them as it moved from Samsung tablets to the Steam Deck.</p>
       </section>
     </div>
 
-    <!-- COVER VISUAL -->
-    <figure class="case__media"><div class="case__ph">Visual placeholder</div></figure>
+    <!-- VISUAL 1: hardware line-up -->
+    <figure class="screen screen--hero">
+      <img src="../assets/wingman-ai/hardware.webp?v=2" width="2688" height="1192" alt="The hardware the app runs with: a Wingman drone, a Steam Deck showing the first-person camera view of a power plant, and two radio receivers on tripods.">
+      <figcaption class="case__note">Hardware: drone, Steam Deck, and receiver.</figcaption>
+    </figure>
 
-    <!-- TEXT -->
-    <div class="case__body">
-      <section>
-        <h2>Context</h2>
-        <p>[Context: the situation and the problem. What wasn’t working, for whom, and why it mattered.]</p>
-      </section>
-      <section>
-        <h2>Approach</h2>
-        <p>[Approach: how you worked through it. Research, key decisions, and what you tried along the way.]</p>
-      </section>
-      <section>
-        <h2>Outcome</h2>
-        <p>[Outcome: what shipped and what changed as a result.]</p>
-      </section>
-      <section>
-        <h2>Credits</h2>
-        <p>Product Design<br>Hana Ognjenovic</p>
-      </section>
-    </div>
+    <!-- THE CHALLENGE -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>The challenge</h2>
+        <p>Operators flew the drones with an app on Samsung tablets. Moving to the Steam Deck changed the hardware underneath the app: a smaller screen, held in both hands, with joysticks, triggers, and buttons around it.</p>
+        <p>The existing interface was not ready for that. Its elements were too small to read and use on the new screen, and controls were not placed for the way operators hold the device. The drone had also gained new capabilities that the app needed to support.</p>
+        <p>The task was to refine the interface for clear, readable visuals, close functional gaps, and add key features, while keeping disruption for operators to a minimum.</p>
+      </div>
 
-    <!-- GALLERY -->
-    <div class="case__gallery">
-      <figure class="case__media"><div class="case__ph">Visual placeholder</div></figure>
-      <figure class="case__media"><div class="case__ph">Visual placeholder</div></figure>
-      <figure class="case__media case__media--wide"><div class="case__ph">Visual placeholder</div></figure>
-    </div>
+      <div class="panels panels--3">
+        <div class="panel">
+          <p class="panel__label">01</p>
+          <p class="panel__title">Too small to use</p>
+          <p>Text and touch targets designed for a tablet did not hold up on the Steam Deck screen.</p>
+        </div>
+        <div class="panel">
+          <p class="panel__label">02</p>
+          <p class="panel__title">Not built for the hands</p>
+          <p>Placements did not account for how operators hold the controller with both hands.</p>
+        </div>
+        <div class="panel">
+          <p class="panel__label">03</p>
+          <p class="panel__title">New capabilities</p>
+          <p>Features such as the distance sensor needed a place in the interface.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY ROLE -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>My role</h2>
+        <p>I worked on the redesign together with the Lead Product Designer, from feature mapping and flow exploration to visual design, accessibility improvements, and internal testing.</p>
+      </div>
+
+      <div class="panels">
+        <div class="panel">
+          <p class="panel__title">Design end to end</p>
+          <p>Designed core screens, refined user flows, and optimised the interface for clarity and speed.</p>
+        </div>
+        <div class="panel">
+          <p class="panel__title">Engineering partnership</p>
+          <p>Validated technical feasibility with engineering, tested live on the device, and managed the complete developer handoff.</p>
+        </div>
+        <div class="panel">
+          <p class="panel__title">Design system</p>
+          <p>Revamped key components and tightened the token structure, so components and variants were easier to fine-tune.</p>
+        </div>
+        <div class="panel">
+          <p class="panel__title">Microcopy</p>
+          <p>Polished product copy and notifications to give operators clearer guidance.</p>
+        </div>
+      </div>
+
+      <div class="case__text case__text--heading"><h3>Four-month roadmap</h3></div>
+      <ol class="panels panels--3">
+        <li class="panel"><p class="metric__value">01</p><p>App audit</p></li>
+        <li class="panel"><p class="metric__value">02</p><p>Feature mapping</p></li>
+        <li class="panel"><p class="metric__value">03</p><p>Features and flows refinement</p></li>
+        <li class="panel"><p class="metric__value">04</p><p>Live testing and validation</p></li>
+        <li class="panel"><p class="metric__value">05</p><p>Design system update</p></li>
+        <li class="panel"><p class="metric__value">06</p><p>Developer handoff and finalisation</p></li>
+      </ol>
+      <p class="case__note">November 2024 to February 2025.</p>
+    </section>
+
+    <!-- SCOPE -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Scope</h2>
+        <p>Validating the main features and functionality was the primary goal. The scope covered the home screen, first-person view, map view, target tracking, the distance and hit sensors, notifications, the gallery, and supporting capabilities such as the controller manual and drone selection.</p>
+      </div>
+    </section>
+
+    <!-- HOME SCREEN -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>A home screen at the app start</h2>
+        <p>I introduced a home screen as the first thing operators see. It brings the critical entry points together, balanced with open space: missions and the gallery, resuming the last flight, the user manual, picking a drone, and Wi-Fi, settings, and shut down.</p>
+      </div>
+      <figure class="screen screen--hero">
+        <img src="../assets/wingman-ai/home.webp" width="2496" height="1540" alt="The home screen: a panel titled Welcome to Wingman AI with Missions and Gallery, Last flight with Resume, User manual, Pick a drone, and Wi-fi, Settings and Shut down buttons, over an abstract blue and violet landscape." loading="lazy">
+      </figure>
+
+      <div class="panels">
+        <figure class="panel screen">
+          <figcaption class="panel__label">Pick your UAV</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/drone-picker.webp" width="2496" height="1549" alt="Pick your UAV, looking for UAVs: a row of drone cards, R2, 747 Drone (selected) and LF 20, each with battery level, range and flight time, with Refresh, Wi-Fi and Connect drone buttons." loading="lazy">
+          <figcaption>Each drone shows battery, range, and flight time before take-off.</figcaption>
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Controller user manual</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/controller-manual.webp" width="1858" height="1160" alt="Controller user manual: an outline of the Steam Deck with every joystick, arrow key and button labelled, such as A accept, B back, X stop moving, Y return to home, and shortcuts for kill motors, touch and go, sport mode and cursor navigation." loading="lazy">
+          <figcaption>Every control on the device, explained in one screen.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FIRST-PERSON VIEW -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>First-person view</h2>
+        <p>Since most controls live on the physical controller, we prioritised essential on-screen information and gave as much of the screen as possible to the camera.</p>
+      </div>
+      <figure class="screen screen--hero">
+        <img src="../assets/wingman-ai/first-person-view.webp" width="2422" height="1513" alt="First-person camera view inside a warehouse: a round mini-map with compass in the top left, GNSS and VIO toggles, signal, Wi-Fi and battery status, speed and altitude readouts around a central reticle, a shutter button, and a You’ve arrived message at the bottom." loading="lazy">
+      </figure>
+    </section>
+
+    <!-- SENSORS -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Distance and hit sensors</h2>
+        <p>The drone gained a new distance sensor. I made it visible in the app so operators can track proximity with more confidence in confined spaces: the edges of the camera view glow in the direction of a nearby obstacle, and the colour shows how close it is.</p>
+      </div>
+      <figure class="screen screen--hero">
+        <img src="../assets/wingman-ai/distance-sensor.webp" width="1987" height="1240" alt="First-person view in a parking garage with a red glow along the bottom edge and an orange glow on the right edge, showing obstacles close below and to the right." loading="lazy">
+      </figure>
+
+      <div class="panels panels--3 panels--attached">
+        <div class="panel">
+          <p class="panel__label"><span class="zone zone--near" aria-hidden="true"></span>0 to 0.5 m</p>
+          <p class="panel__title">Red: too close</p>
+        </div>
+        <div class="panel">
+          <p class="panel__label"><span class="zone zone--mid" aria-hidden="true"></span>0.5 to 1.5 m</p>
+          <p class="panel__title">Orange: caution</p>
+        </div>
+        <div class="panel">
+          <p class="panel__label"><span class="zone zone--far" aria-hidden="true"></span>More than 1.5 m</p>
+          <p class="panel__title">Blue: safe distance</p>
+        </div>
+      </div>
+
+      <div class="case__text case__text--heading"><h3>Hit sensor by direction</h3></div>
+      <div class="panels">
+        <figure class="panel screen">
+          <figcaption class="panel__label">Left</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/hit-left.webp" width="1638" height="1022" alt="First-person view down a concrete walkway with an orange glow on the left edge." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Right</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/hit-right.webp" width="1637" height="1022" alt="The same view with an orange glow on the right edge." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Top</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/hit-top.webp" width="1664" height="1039" alt="The same view with an orange and red glow along the top edge." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Bottom</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/hit-bottom.webp" width="1664" height="1039" alt="The same view with an orange and red glow along the bottom edge." loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- TARGET TRACKING AND MAP -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Target tracking and map view</h2>
+        <p>Target tracking marks the tracked object in the camera view with its distance. The map view shows the drone’s position and flight mode, and swaps with the camera feed, which moves into a small round preview.</p>
+      </div>
+      <figure class="screen screen--hero">
+        <img src="../assets/wingman-ai/target-tracking.webp?v=2" width="2286" height="1424" alt="First-person view of industrial buildings with a green tracking box around a target labelled 16 m, and a You’ve arrived message with a Close button." loading="lazy">
+      </figure>
+
+      <div class="panels panels--3">
+        <figure class="panel screen">
+          <figcaption class="panel__label">Auto mode</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/map-auto.webp" width="1687" height="1053" alt="Dark street map with the drone as a blue arrow, an Auto mode badge, the camera feed in a round preview, side tools, and a red End action button." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Manual mode</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/map-manual.webp" width="1687" height="1053" alt="The same map with a Manual mode badge and a green home marker." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Satellite</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/map-satellite.webp" width="1670" height="1042" alt="Satellite map of fields and woodland with the drone as a blue arrow and the camera feed in a round preview." loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- NOTIFICATIONS AND GALLERY -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Notifications and gallery</h2>
+        <p>Notifications tell operators what is happening and what to do next, in short, plain language, from a low battery to a lost connection. The gallery collects mission recordings and photos per drone.</p>
+      </div>
+      <div class="panels">
+        <figure class="panel screen">
+          <figcaption class="panel__label">Low battery</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/notification-low-battery.webp" width="1654" height="1032" alt="First-person view with a Low battery notification: Drone battery is critically low, below 5%. It will attempt to land safely at the current location." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Connection lost</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/notification-connection-lost.webp" width="1834" height="1144" alt="Dimmed first-person view with a Connection lost notification: You’ll be redirected to the homepage in 10 seconds." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Gallery</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/gallery-missions.webp" width="1795" height="1121" alt="Gallery with Missions and Photos tabs, a drone selector set to Drone T2, a sync notice, and a grid of mission recordings, one still recording." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Slide view</figcaption>
+          <img class="shot-img" src="../assets/wingman-ai/gallery-slide.webp" width="1795" height="1121" alt="A single aerial photo of a forest road in slide view, with its date and size, previous and next arrows, and a strip of thumbnails below." loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- TESTING -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Testing on the device</h2>
+        <p>With Steam Deck devices ready, I could test continuously on the real hardware using Figma Mirror. I often visited the startup’s office to demo the latest design updates and gather fast, actionable feedback from the core team.</p>
+        <p>The team also had a facility where we could set up obstacles and fly the drone, so features such as the distance sensor could be tried in real conditions, not only on screen.</p>
+      </div>
+    </section>
+
+    <!-- DESIGN SYSTEM -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>A tighter design system</h2>
+        <p>Toward the end of the project, I used the remaining time to lift the UI components and the app’s visual quality, an area that is often overlooked in this industry. A tighter token structure made fine-tuning components and variants much easier.</p>
+      </div>
+      <figure class="screen screen--hero">
+        <img src="../assets/wingman-ai/settings-cards.webp?v=2" width="2081" height="1092" alt="Two settings cards on an orange background: Battery, 35%, charging, 1 h 42 min left, with a yellow progress bar; and Total storage, 131.5 of 256 GB, 217 files, with a green progress bar." loading="lazy">
+        <figcaption class="case__note">Settings cards for battery and storage.</figcaption>
+      </figure>
+    </section>
+
+    <!-- RESULTS AND NEXT STEPS -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Results and next steps</h2>
+        <p>The redesign is in the app today. Compared with the previous version, the interface is more visible and legible on the Steam Deck, and the new features have a clear place in it. Many rounds of internal testing helped confirm the outcome for both accessibility and functionality.</p>
+        <p>Working closely with engineering was one of the most rewarding parts of the project. With limited time, we set some alternative concepts and explorations aside.</p>
+        <p>Next, I would deepen testing with operators on the existing features, find opportunities for improvement, and surface more real-time insights and interactive components that add value in flight.</p>
+      </div>
+    </section>
 
     <nav class="case__next" aria-label="Next project">
       <a class="work-row" href="grape.html">
@@ -87,12 +306,12 @@
 
   <footer class="footer" id="contact">
     <div class="footer__contact">
-      <a href="mailto:h.ognjenovic@gmail.com">h.ognjenovic@gmail.com <span class="arrow" aria-hidden="true">↘</span></a>
-      <a href="tel:+381642472419">+381 64 247 2419 <span class="arrow" aria-hidden="true">↘</span></a>
+      <a href="mailto:h.ognjenovic@gmail.com">h.ognjenovic@gmail.com <span class="arrow arrow--diag" aria-hidden="true">→</span></a>
+      <a href="tel:+381642472419">+381 64 247 2419 <span class="arrow arrow--diag" aria-hidden="true">→</span></a>
     </div>
     <p class="footer__name"><span data-fit>Let’s connect.</span></p>
   </footer>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=20261018s"></script>
 </body>
 </html>

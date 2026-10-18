@@ -60,3 +60,47 @@ function revealOnScroll() {
 }
 
 revealOnScroll();
+
+// Click a smaller screenshot to see it large. Works with the keyboard too (Enter or Space to open, Esc to close).
+function enableZoom() {
+  const shots = document.querySelectorAll("img.shot-img");
+  if (!shots.length || typeof HTMLDialogElement !== "function") return;
+
+  const dialog = document.createElement("dialog");
+  dialog.className = "zoom";
+  dialog.setAttribute("aria-label", "Enlarged image");
+  dialog.innerHTML = '<button class="zoom__close" type="button" aria-label="Close">×</button><img class="zoom__img" alt="">';
+  document.body.appendChild(dialog);
+  const big = dialog.querySelector(".zoom__img");
+
+  let opener = null;
+  const open = (img) => {
+    opener = img;
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt;
+    dialog.showModal();
+    document.documentElement.classList.add("is-zoomed");
+  };
+  dialog.addEventListener("close", () => {
+    document.documentElement.classList.remove("is-zoomed");
+    if (opener) opener.focus();
+  });
+  // Any click closes it: on the image, the backdrop or the button
+  dialog.addEventListener("click", () => dialog.close());
+
+  shots.forEach((img) => {
+    img.classList.add("is-zoomable");
+    img.tabIndex = 0;
+    img.setAttribute("role", "button");
+    img.setAttribute("aria-label", "Enlarge image: " + img.alt);
+    img.addEventListener("click", () => open(img));
+    img.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        open(img);
+      }
+    });
+  });
+}
+
+enableZoom();
