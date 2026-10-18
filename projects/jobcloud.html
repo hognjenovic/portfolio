@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css?v=20261018s">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/icons/favicon-64.png">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
 </head>
 <body class="case theme-jobcloud">
 
@@ -71,7 +74,7 @@
         <h2>The problem</h2>
         <p>New visitors often arrive with an intention rather than a precise job title. They may know what kind of work they want, what they have experience in, where they want to work, or what constraints matter—but not the exact keywords or filters to enter.</p>
         <p>The existing experience began with a blank search box and expected users to translate that thought into the platform’s vocabulary before the product could help.</p>
-        <p>Internal analysis suggested that approximately 68% of first-time queries were vague, empty, or overly broad. First-visit application starts were 6.7%, compared with 10.5% on return visits. These figures established the context for the opportunity; they do not show that the assistant improved conversion.</p>
+        <p>Internal analytics suggested that approximately 68% of first-time queries were vague, empty, or overly broad. First-visit application starts were 6.7%, compared with 10.5% on return visits. These figures established the context for the opportunity; they do not show that the assistant improved conversion.</p>
       </div>
 
       <!-- VISUAL 2: problem-context metrics -->
@@ -85,7 +88,7 @@
           <p>first-visit vs. return-visit application starts</p>
         </div>
       </div>
-      <p class="case__note">Source: internal analysis. These figures describe the problem; they are not results of the assistant.</p>
+      <p class="case__note">Source: internal analytics (Google Analytics and Tableau). These figures describe the problem; they are not results of the assistant.</p>
     </section>
 
     <!-- SCOPE -->
@@ -121,8 +124,9 @@
     <section class="case__section">
       <div class="case__text">
         <h2>Research and iteration</h2>
-        <p>I ran two rounds of moderated usability testing, with six participants in each round. Round 1 tested a pop-up modal containing a set of filters. Participants understood it as helpful guidance, but found it underwhelming as an AI experience: it felt too much like a guided filter flow, especially compared with what they expected AI assistants to do.</p>
-        <p>That finding changed the interaction model. For Round 2, I designed a dedicated chat view with a guided conversation. The assistant gathered information conversationally while building structured search criteria in the background.</p>
+        <p>I ran two rounds of moderated usability testing, with six participants in each round. Round 1 tested a pop-up modal containing a set of filters. Participants understood it as helpful guidance, but found it underwhelming as an AI experience. Most of them already used AI in their job search in some way and expected something similar, not basic filters split into steps.</p>
+        <p>The modal was also hard to read. The job search page is already content-heavy, and a pop-up of filters on top of it was not a good solution, especially for older participants.</p>
+        <p>Those findings changed the interaction model. For Round 2, I designed a dedicated view with real AI capabilities: in one chat, users could reach all of the platform’s search features in natural language. The assistant gathered information conversationally while building structured search criteria in the background.</p>
         <p>Classic search remained the default entry point; this was not an agent-first redesign. Participants found the assistant quickly and understood what it was before opening the tab.</p>
       </div>
 
@@ -132,7 +136,7 @@
           <p class="panel__label">Round 1</p>
           <p class="panel__title">Guided filter modal</p>
           <img class="shot-img" src="../assets/jobcloud/round1-modal-step1.png" width="798" height="664" alt="Round 1 AI Assistant modal, step 1 of 4: “Which job are you looking for?” with a job title field containing “designer” and a Next button." loading="lazy">
-          <figcaption>Helpful guidance, but perceived as too similar to filters to meet expectations of AI.</figcaption>
+          <figcaption>Helpful guidance, but too close to basic filters for people who already use AI, and hard to read on a busy page.</figcaption>
         </figure>
         <div class="panel panel--center">
           <p class="panel__label">Design pivot</p>
