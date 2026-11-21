@@ -548,6 +548,9 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 .case__main { padding: 0 var(--gutter); }
 .case__main > :not(.case__top) { max-width: var(--content-max); margin-inline: auto; }
 
+/* Case studies sit on a slightly off-white page so white screenshots stand out */
+body.case { background: #fafaf8; }
+
 /* Blue band behind the top bar and the whole title card; the page below is white for reading */
 .case__top {
   margin: 0 calc(-1 * var(--gutter)) var(--space-48);
@@ -642,6 +645,7 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 
 /* Next project: a homepage work row with a small label above the name */
 .case__next { padding: var(--section-gap) 0 var(--space-64); }
+.case__next .work-row { padding-right: calc(var(--space-30) + var(--space-24)); }
 .work-row__text { display: flex; flex-direction: column; gap: var(--space-4); }
 .work-row__label { color: var(--color-ink-soft); line-height: var(--leading-label); letter-spacing: var(--tracking-label); transition: color 0.2s ease; }
 .work-row:hover .work-row__label, .work-row:focus-visible .work-row__label { color: var(--color-on-primary); }
@@ -861,7 +865,8 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 }
 .zoom[open] { display: flex; align-items: center; justify-content: center; }
 .zoom::backdrop { background: rgba(10, 10, 10, 0.92); }
-.zoom__img { max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: var(--radius-sm); }
+.zoom__frame { position: relative; line-height: 0; animation: zoom-in 0.25s cubic-bezier(0.22, 1, 0.36, 1); }
+.zoom__img { max-width: calc(100vw - 2 * var(--gutter)); max-height: calc(100dvh - 2 * var(--gutter)); width: auto; height: auto; border-radius: var(--radius-sm); }
 .zoom__close {
   position: fixed; top: var(--space-16); right: var(--space-16);
   width: 48px; height: 48px; border-radius: 50%;
@@ -869,16 +874,61 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
 }
 .zoom__close:hover { background: rgba(255, 255, 255, 0.22); }
 .is-zoomed { overflow: hidden; }
-@media (prefers-reduced-motion: no-preference) {
-  .zoom[open] .zoom__img { animation: zoom-in 0.25s cubic-bezier(0.22, 1, 0.36, 1); }
-  .zoom[open]::backdrop { animation: fade-in 0.25s ease; }
-}
+.zoom[open]::backdrop { animation: fade-in 0.25s ease; }
 @keyframes zoom-in { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: none; } }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
 /* Device mock-up on white: no frame, centred, capped so the phones don't fill the screen */
 .screen--device { align-items: center; }
-.screen--device img { width: 100%; max-width: 760px; border: 0; }
+.screen--device img { width: 100%; max-width: 760px; border: 0; mix-blend-mode: multiply; } /* white backdrop melts into the off-white page */
+
+/* Desktop beside mobile in one card: each item grows in proportion to its image's width:height,
+   so both screens end up exactly the same height (set per item with an inline flex value) */
+.duo { flex-direction: row; align-items: flex-start; gap: var(--space-24); }
+.duo__item { display: flex; flex-direction: column; gap: var(--space-16); min-width: 0; margin: 0; flex-basis: 0; }
+.duo__item img.shot-img { flex: none; width: 100%; height: auto; padding: 0; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-bg); }
+.duo__item img.shot-img[height="1688"] { border-radius: 24px; }
+/* Tablet: labels can wrap in the narrow phone column; reserve two lines so both screens start level */
+@media (min-width: 810px) and (max-width: 1199px) { .duo__item > figcaption { min-height: 3em; } }
+.panel.duo--attached, .panels + .panels--attached-one { margin-top: calc(var(--space-16) - var(--space-48)); }
+/* A single screenshot card spanning the content width */
+.screen img.shot-img--full { flex: none; height: auto; padding: 0; border: 1px solid var(--color-line); }
+
+/* Full phone screen inside a card: rounded like a phone, capped so it stays a phone size */
+.screen img.shot-img.phone { flex: none; width: 100%; max-width: 300px; margin-inline: auto; padding: 0; border-radius: 28px; }
+
+/* Zoomed-in detail of a phone screen: capped so it shows near real size, not blown up */
+.screen img.shot-img.detail { flex: none; width: 100%; max-width: 420px; margin-inline: auto; }
+
+/* Thinking indicator (JobCloud): illustration and status line rotate every 3s; the line pulses */
+.thinking {
+  position: relative; flex: 1; display: grid; place-items: center; min-height: 180px; overflow: hidden;
+  border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-bg);
+}
+.thinking__item {
+  grid-area: 1 / 1; display: flex; align-items: center; gap: var(--space-12);
+  padding: var(--space-16); color: var(--color-ink-soft); font-size: 16px; opacity: 0;
+}
+.thinking__item img { width: 56px; height: auto; flex: none; border: 0; border-radius: 0; }
+.thinking__item:first-child { opacity: 1; }
+.thinking__item { animation: thinking-cycle 9s infinite; }
+.thinking__item:first-child { opacity: 0; }
+.thinking__item:nth-child(2) { animation-delay: 3s; }
+.thinking__item:nth-child(3) { animation-delay: 6s; }
+.thinking__item span { animation: thinking-pulse 1.5s ease-in-out infinite; }
+/* Live thinking indicator laid over a screenshot; --u is one screen point in container units, so it scales with the image */
+.live { position: relative; container-type: inline-size; }
+.live > img { display: block; }
+.thinking-live { position: absolute; display: grid; height: calc(57 * var(--u)); pointer-events: none; }
+.thinking-live .thinking__item { grid-area: 1 / 1; gap: calc(21.5 * var(--u)); padding: 0; font-size: calc(12 * var(--u)); color: #5d5d65; white-space: nowrap; }
+.thinking-live .thinking__item img { width: calc(50 * var(--u)); height: auto; border: 0; border-radius: 0; }
+
+@keyframes thinking-cycle {
+  0% { opacity: 0; transform: translateY(16px); }
+  6%, 30% { opacity: 1; transform: none; }
+  36%, 100% { opacity: 0; transform: translateY(-16px); }
+}
+@keyframes thinking-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
 
 /* Coloured dot before a distance band label (Wingman AI distance sensor) */
 .zone { display: inline-block; width: 0.75em; height: 0.75em; margin-right: 0.5em; border-radius: 50%; vertical-align: -0.05em; }
@@ -909,6 +959,10 @@ button { font: inherit; letter-spacing: inherit; color: inherit; background: non
   .case__section--sub { padding-top: var(--space-48); }
   .case__text h3 { font-size: 20px; }
   .panels, .panels--4, .panels--5, .panels--3.panels--lead { grid-template-columns: 1fr; }
+  .duo { flex-direction: column; align-items: stretch; }
+  .duo__item[style] { flex: none !important; }
+  .duo__item:has(img[height="1688"]) { max-width: 300px; align-self: center; width: 100%; }
+  .case__next .work-row { padding-right: calc(var(--space-16) + var(--space-24)); }
   .panels--lead img.shot-img { max-width: 420px; }
   .panel { padding: var(--space-20) var(--space-16); }
   .shot--tall { aspect-ratio: 4 / 3; }

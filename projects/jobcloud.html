@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20261018t">
+  <link rel="stylesheet" href="../css/styles.css?v=20261121k">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/icons/favicon-64.png">
   <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
@@ -41,7 +41,7 @@
         <h1 class="case__title case__title--long">From a blank search box to a useful first conversation</h1>
         <dl class="case__facts case__facts--six">
           <div><dt>Role</dt><dd>Product Designer</dd></div>
-          <div><dt>Team</dt><dd>FIND team; worked with product, engineering, and research support</dd></div>
+          <div><dt>Team</dt><dd>Product, engineering, and research support</dd></div>
           <div><dt>Scope</dt><dd>Problem framing, interaction and conversation design, prototype, and moderated usability testing</dd></div>
           <div><dt>Timeline</dt><dd>Approximately two months</dd></div>
           <div><dt>Status</dt><dd>Tested prototype; not launched</dd></div>
@@ -53,7 +53,7 @@
 
     <!-- VISUAL 1: the assistant’s opening screen -->
     <figure class="screen screen--hero">
-      <img src="../assets/jobcloud/opening-page.png" width="2688" height="1450" alt="The jobs.ch AI Assistant opening screen: the main navigation with the AI Assistant tab selected, a single prompt, “Hello! Tell me what you’re after, or what you’ve been doing. Whichever is easier.”, and an empty message field.">
+      <img src="../assets/jobcloud/v2/d-opening-full.webp?v=4" width="2880" height="1560" alt="The jobs.ch AI Assistant on desktop: “Hello, Jane!” with a choice to continue without a CV or upload a CV, and a message field below, next to a slim sidebar.">
     </figure>
 
     <!-- STARTING POINT -->
@@ -63,7 +63,7 @@
         <p>The platform’s strategy was to keep the familiar search experience and add an agentic approach alongside it, as a secondary way in. I added a new AI Assistant tab to the central navigation, where users already get an overview of everything available to them.</p>
       </div>
       <figure class="screen screen--hero">
-        <img src="../assets/jobcloud/entry-page.png" width="2688" height="1453" alt="The jobs.ch job search page: the search header with “Go to basic search”, the central navigation with the new AI Assistant tab placed first next to the selected Job search tab, and below it the heading “Don’t search the job, describe it!” with three search tips and a Find a job button." loading="lazy">
+        <img src="../assets/jobcloud/entry-page.png?v=4" width="2688" height="1456" alt="The jobs.ch job search page: the search header, the central navigation with the new AI Assistant tab placed first next to the selected Job search tab, and below it the heading “Don’t search the job, describe it!” with three search tips and a Find a job button." loading="lazy">
         <figcaption class="case__note">The AI Assistant tab sits next to Job search in the central navigation.</figcaption>
       </figure>
     </section>
@@ -130,8 +130,8 @@
         <p>Classic search remained the default entry point; this was not an agent-first redesign. Participants found the assistant quickly and understood what it was before opening the tab.</p>
       </div>
 
-      <!-- VISUAL 4: round 1 → design pivot → round 2 -->
-      <div class="panels panels--3">
+      <!-- VISUAL 4: round 1 → design pivot, then round 2 below -->
+      <div class="panels">
         <figure class="panel screen">
           <p class="panel__label">Round 1</p>
           <p class="panel__title">Guided filter modal</p>
@@ -142,38 +142,201 @@
           <p class="panel__label">Design pivot</p>
           <p class="panel__title panel__title--large">From collecting filter inputs to helping users articulate intent.</p>
         </div>
-        <figure class="panel screen">
-          <p class="panel__label">Round 2</p>
-          <p class="panel__title">Dedicated assistant conversation</p>
-          <img class="shot-img" src="../assets/jobcloud/opening-screen.png" width="1619" height="1622" alt="jobs.ch with an AI Assistant tab next to Job search in the main navigation, open on the assistant’s opening prompt and message field." loading="lazy">
-          <figcaption>Participants discovered it quickly and understood its purpose before opening it.</figcaption>
-        </figure>
       </div>
+      <figure class="panel screen panels--attached-one">
+        <p class="panel__label">Round 2</p>
+        <p class="panel__title">Dedicated assistant conversation</p>
+        <img class="shot-img shot-img--full" src="../assets/jobcloud/v2/df-attachment.webp?v=3" width="2880" height="1560" alt="The dedicated assistant view on desktop: a user asks for help with a cover letter, the assistant replies conversationally, and a file is attached in the message field." loading="lazy">
+        <figcaption>Participants discovered it quickly and understood its purpose before opening it.</figcaption>
+      </figure>
 
       <!-- VISUAL 5: how the new flow works -->
       <div class="case__text case__text--heading"><h3>How the new flow works</h3></div>
-      <ol class="panels">
-        <li class="panel"><p class="panel__label">01</p><figure class="screen"><figcaption class="panel__title">Open prompt</figcaption><img class="shot-img" src="../assets/jobcloud/step-open-prompt.png" width="1500" height="1336" alt="The opening prompt: “Hello! Tell me what you’re after, or what you’ve been doing. Whichever is easier.” above an empty message field." loading="lazy"></figure></li>
-        <li class="panel"><p class="panel__label">02</p><figure class="screen"><figcaption class="panel__title">User describes a goal or experience</figcaption><img class="shot-img" src="../assets/jobcloud/step-describe.png" width="1464" height="615" alt="The user writes that they have done UX/UI work for a few years and are unsure whether to move toward Product Designer or Product Manager; the assistant acknowledges both directions." loading="lazy"></figure></li>
-        <li class="panel"><p class="panel__label">03</p><figure class="screen"><figcaption class="panel__title">Assistant asks a focused clarification</figcaption><img class="shot-img" src="../assets/jobcloud/step-clarify.png" width="1464" height="1153" alt="The assistant asks whether design craft or product ownership feels more appealing, with answer options, a note that the user can type their own answer, and a Skip this question link." loading="lazy"></figure></li>
-        <li class="panel"><p class="panel__label">04</p><figure class="screen"><figcaption class="panel__title">Follow-up questions narrow the search</figcaption><img class="shot-img" src="../assets/jobcloud/step-follow-up.png" width="1464" height="838" alt="The assistant notes the user is flexible on language and asks where in Switzerland they would like to work, with options for Zurich, Bern and Basel, Lausanne and Geneva, or describing it in their own words, plus a Skip this question link." loading="lazy"></figure></li>
-        <li class="panel"><p class="panel__label">05</p><figure class="screen"><figcaption class="panel__title">Job results and next actions</figcaption><img class="shot-img" src="../assets/jobcloud/step-results.png" width="1464" height="995" alt="The assistant explains that the roles found around Zurich lean toward engineering and product management, followed by three job cards and buttons to show more jobs or view all in job search." loading="lazy"></figure></li>
+      <ol class="panels panels--5">
+        <li class="panel"><p class="metric__value">01</p><p>Open prompt, with or without a CV</p></li>
+        <li class="panel"><p class="metric__value">02</p><p>User describes a goal or experience</p></li>
+        <li class="panel"><p class="metric__value">03</p><p>Focused clarifications with suggested answers</p></li>
+        <li class="panel"><p class="metric__value">04</p><p>Assistant works on it, with a way to stop</p></li>
+        <li class="panel"><p class="metric__value">05</p><p>Job results and next actions</p></li>
       </ol>
+      <p class="case__note">Each step is shown on desktop and mobile in the next section.</p>
 
-      <!-- VISUAL 5b: conversation history -->
-      <div class="panels panels--3 panels--lead">
-        <div class="panel panel--center">
-          <p class="panel__label">Conversation history</p>
-          <p class="panel__title panel__title--large">Earlier conversations stay within reach.</p>
-          <p>A side panel lists recent conversations. Users can start a new one, or rename and delete earlier ones.</p>
-        </div>
+    </section>
+
+    <!-- DESKTOP AND MOBILE: feature by feature, desktop beside mobile -->
+    <section class="case__section">
+      <div class="case__text">
+        <h2>Designing for desktop and mobile</h2>
+        <p>The assistant works on desktop and mobile. Each feature below shows both. They follow one principle: the user stays in control. Several also answer legal requirements, which ask the assistant to be open about what it knows and what it does.</p>
+      </div>
+    </section>
+
+    <section class="case__section case__section--sub">
+      <div class="case__text">
+        <h3>Start with or without a CV</h3>
+        <p>The opening screen lets users add a CV or continue with a few questions. With a CV, the assistant can extract their experience and offer a better experience faster. The choice stays with the user.</p>
+        <p>When a CV is already on file, the opening changes to action cards that ask what the user wants to do next.</p>
+      </div>
+      <div class="panel duo">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop · no CV yet</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/d-opening-full.webp?v=4" width="2880" height="1560" alt="Desktop opening screen: Hello, Jane! with Continue without a CV and Upload a CV, above the message field." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile · no CV yet</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/m-opening.webp" width="780" height="1688" alt="Mobile opening screen with Continue without a CV and Upload a CV." loading="lazy">
+        </figure>
+      </div>
+      <div class="panel duo duo--attached">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop · CV on file</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/df-opening-cv.webp?v=4" width="2880" height="1560" alt="Desktop opening screen when the user has a CV, with action cards: Search with my CV, Create job alert, Refine my search, See saved jobs." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile · CV on file</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/m-opening-cv.webp" width="780" height="1688" alt="Mobile opening screen when the user has a CV, with the same action cards." loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="case__section case__section--sub">
+      <div class="case__text">
+        <h3>Suggested answers that learn</h3>
+        <p>Each question comes with suggested answers right above the message field, so a reply can be a single tap. The suggestions learn from how users interact with them. Confirm stays disabled until something is selected, and users can always type their own answer, skip the question, or ask something else.</p>
+      </div>
+      <div class="panel duo">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop · nothing selected</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/df-answers-empty.webp?v=3" width="2880" height="1560" alt="Desktop: the assistant asks about past work, with three suggested answers, Skip and a disabled Confirm above the message field." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile · nothing selected</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/mf-answers-empty.webp" width="780" height="1688" alt="Mobile: the same question with three unticked suggested answers and a disabled Confirm." loading="lazy">
+        </figure>
+      </div>
+      <div class="panel duo duo--attached">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop · answers selected</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/df-answers-selected.webp?v=3" width="2880" height="1560" alt="Desktop: two of the suggested answers ticked." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile · answers selected</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/mf-answers-selected.webp" width="780" height="1688" alt="Mobile: two answers ticked and Confirm enabled." loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="case__section case__section--sub">
+      <div class="case__text">
+        <h3>A message field that makes room</h3>
+        <p>Users can attach a CV or any other document at any point in the conversation, not only on the opening screen. On mobile, the message field stays compact until it is used, then grows so there is room to write.</p>
+      </div>
+      <div class="panel duo">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop · file attached</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/df-attachment.webp?v=3" width="2880" height="1560" alt="Desktop: a cover letter file attached in the message field, below the assistant’s reply." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile · CV attached</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/mf-attachment.webp" width="780" height="1688" alt="Mobile: jane-cv.pdf attached above a typed answer, with the keyboard open." loading="lazy">
+        </figure>
+      </div>
+      <div class="panels panels--attached">
         <figure class="panel screen">
-          <figcaption class="panel__label">Recent conversations</figcaption>
-          <img class="shot-img" src="../assets/jobcloud/history.png" width="512" height="770" alt="Side panel with a New conversation button and a Recent list: UX designer roles in Zurich, salary range for product roles, part-time marketing jobs, companies hiring data roles, remote frontend positions, switching from agency." loading="lazy">
+          <figcaption class="panel__label">Mobile · at rest</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/m-composer-collapsed.webp?v=3" width="780" height="184" alt="The collapsed message field: What would you like help with?, with a plus button." loading="lazy">
         </figure>
         <figure class="panel screen">
-          <figcaption class="panel__label">Rename or delete</figcaption>
-          <img class="shot-img" src="../assets/jobcloud/history-menu.png" width="512" height="770" alt="The same side panel with the menu of the first conversation open, offering Rename and Delete." loading="lazy">
+          <figcaption class="panel__label">Mobile · while typing</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/m-composer-expanded.webp?v=3" width="780" height="400" alt="The expanded message field holding a longer answer, with a send button." loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="case__section case__section--sub">
+      <div class="case__text">
+        <h3>Thinking, and a way to stop</h3>
+        <p>While the assistant works, an illustration and a short line show what it is doing, changing every few seconds. The send button turns into a stop button, which is both a legal requirement and another way to keep users in control. A stopped response can be continued.</p>
+      </div>
+      <div class="panel duo">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop · thinking</figcaption>
+          <div class="live"><img class="shot-img" src="../assets/jobcloud/v2/df-thinking.webp?v=4" width="2880" height="1560" alt="Desktop: the assistant’s thinking indicator below its reply, with a stop button in the message field." loading="lazy"><div class="thinking-live" data-w="1440" style="left:27.708%;top:35.513%;--u:0.0694cqw" aria-hidden="true"><div class="thinking__item"><img src="../assets/jobcloud/v2/thinking-binoculars.svg" alt=""><span>Scouting the latest job ads…</span></div><div class="thinking__item"><img src="../assets/jobcloud/v2/thinking-location.svg" alt=""><span>Mapping out jobs near you…</span></div><div class="thinking__item"><img src="../assets/jobcloud/v2/thinking-briefcase.svg" alt=""><span>Packing up your best matches…</span></div></div></div>
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile · thinking</figcaption>
+          <div class="live"><img class="shot-img" src="../assets/jobcloud/v2/mf-thinking.webp" width="780" height="1688" alt="Mobile: the thinking indicator and a stop button in the message field." loading="lazy"><div class="thinking-live" data-w="390" style="left:4.436%;top:26.232%;--u:0.2564cqw" aria-hidden="true"><div class="thinking__item"><img src="../assets/jobcloud/v2/thinking-binoculars.svg" alt=""><span>Scouting the latest job ads…</span></div><div class="thinking__item"><img src="../assets/jobcloud/v2/thinking-location.svg" alt=""><span>Mapping out jobs near you…</span></div><div class="thinking__item"><img src="../assets/jobcloud/v2/thinking-briefcase.svg" alt=""><span>Packing up your best matches…</span></div></div></div>
+        </figure>
+      </div>
+      <div class="panels panels--attached">
+        <figure class="panel screen">
+          <figcaption class="panel__label">Stop while thinking</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/m-composer-stop.webp?v=3" width="780" height="208" alt="The message field with a stop button in place of send." loading="lazy">
+        </figure>
+        <figure class="panel screen">
+          <figcaption class="panel__label">Response stopped</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/m-response-stopped.webp?v=3" width="780" height="380" alt="A partial reply followed by Response stopped and a button to continue." loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="case__section case__section--sub">
+      <div class="case__text">
+        <h3>Jobs inside the conversation</h3>
+        <p>Matching jobs appear right in the chat as a horizontal row. Scrolling sideways saves vertical space and leaves room for more detail on each job ad. A short feedback question follows, because the system needs to learn, especially in its first version.</p>
+      </div>
+      <div class="panel duo">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/df-jobs.webp?v=3" width="2880" height="1560" alt="Desktop: job cards in a horizontal row inside the chat, with View all and an Is this helpful? question." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/mf-jobs.webp" width="780" height="1688" alt="Mobile: a job card with the next one peeking in from the right, and the feedback question below." loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="case__section case__section--sub">
+      <div class="case__text">
+        <h3>Every job from the chat in one place</h3>
+        <p>The menu holds more actions. View all jobs gathers every job the assistant has shown in the conversation, so users always have a place to go back to, with filters for jobs not yet opened, viewed, or saved. A condensed version of the job ad saves space.</p>
+      </div>
+      <div class="panel duo">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop · menu</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/df-menu.webp?v=3" width="2880" height="1560" alt="Desktop: the opened menu with View all jobs, Your search brief and Activity log, next to job cards in the chat." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile · menu</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/m-sidebar.webp?v=3" width="780" height="1688" alt="Mobile: the opened menu with View all jobs, Your search brief and Activity log." loading="lazy">
+        </figure>
+      </div>
+      <div class="panel duo duo--attached">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop · view all jobs</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/df-view-all.webp?v=3" width="2880" height="1560" alt="Desktop: the 3 jobs in this chat panel with tabs All, Not opened, Viewed and Saved, beside the conversation." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile · view all jobs</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/m-view-all-jobs.webp?v=3" width="780" height="1688" alt="Mobile: 3 jobs in this chat with the same tabs and condensed job ads." loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="case__section case__section--sub">
+      <div class="case__text">
+        <h3>What the assistant knows about you</h3>
+        <p>The search brief shows what the system knows about the user. It is a legal requirement, and a technical one means it can only be changed through the chat.</p>
+      </div>
+      <div class="panel duo duo--attached">
+        <figure class="duo__item" style="flex: 1.846">
+          <figcaption class="panel__label">Desktop · search brief</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/df-brief-filled.webp?v=3" width="2880" height="1560" alt="Desktop: Your search brief dialog with tags UX Designer, Zurich, Hybrid and 80–100%." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 0.466">
+          <figcaption class="panel__label">Mobile · search brief</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/m-brief-summary.webp" width="780" height="1688" alt="Mobile: Your search brief with tags Customer service, Zurich, Hybrid and 80–100%." loading="lazy">
         </figure>
       </div>
     </section>
@@ -188,9 +351,15 @@
       </div>
 
       <!-- VISUAL 6: opening before/after -->
-      <div class="panels">
-        <figure class="panel screen"><figcaption class="panel__label">Before · Round 1 modal</figcaption><img class="shot-img" src="../assets/jobcloud/round1-modal-steps.png" width="1614" height="1511" alt="The four steps of the Round 1 modal: job title, workload percentage, contract type, and language, each with a progress bar and Next or Show jobs." loading="lazy"></figure>
-        <figure class="panel screen"><figcaption class="panel__label">After · Round 2 opening screen</figcaption><img class="shot-img" src="../assets/jobcloud/opening-screen.png" width="1619" height="1622" alt="The Round 2 assistant opening screen: a single prompt, “Hello! Tell me what you’re after, or what you’ve been doing. Whichever is easier.”, above a message field." loading="lazy"></figure>
+      <div class="panel duo">
+        <figure class="duo__item" style="flex: 1.068">
+          <figcaption class="panel__label">Before · Round 1 modal</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/round1-modal-steps.png" width="1614" height="1511" alt="The four steps of the Round 1 modal: job title, workload percentage, contract type, and language, each with a progress bar and Next or Show jobs." loading="lazy">
+        </figure>
+        <figure class="duo__item" style="flex: 1.519">
+          <figcaption class="panel__label">After · Assistant opening screen</figcaption>
+          <img class="shot-img" src="../assets/jobcloud/v2/d-opening-crop.webp" width="1580" height="1040" alt="“Hello, Jane!” with two options, Continue without a CV and Upload a CV, above the message field and a reminder to double-check important details." loading="lazy">
+        </figure>
       </div>
       <p class="case__note">From selecting filters to describing intent.</p>
     </section>
@@ -218,13 +387,13 @@
     <section class="case__section case__section--sub">
       <div class="case__text">
         <h3>3. Treat results as a decision point</h3>
-        <p>A result list should help users decide what to do next. In the prototype, the results came with next actions: refining the search, getting notified about new matches, broadening the search, or exploring related information such as career changes and salaries.</p>
+        <p>A result list should help users decide what to do next. Each result comes with a short feedback question, and when there are few matches, the assistant suggests ways to expand the search, such as showing jobs in another city, removing a workload or industry filter, or including temporary jobs.</p>
       </div>
 
       <!-- VISUAL 8: results and next actions -->
-      <figure class="screen screen--narrow">
-        <img class="shot-img" src="../assets/jobcloud/next-actions.png" width="1464" height="937" alt="Next-step options after the results: refine results further, keep me posted about new matches, broaden the search, ask which roles fit best, explore a career change, or check a salary." loading="lazy">
-        <figcaption class="case__note">Next actions offered after the results in the prototype.</figcaption>
+      <figure class="screen screen--hero">
+        <img src="../assets/jobcloud/v2/df-expand.webp?v=3" width="2880" height="1560" alt="Desktop: one matching job card, an Is this helpful? question, and Expand search options: Show jobs in Bern, Remove workload filter, Remove industry filter, Show temporary jobs." loading="lazy">
+        <figcaption class="case__note">When results are few, the assistant offers ways to expand the search.</figcaption>
       </figure>
     </section>
 
@@ -313,6 +482,6 @@
     <p class="footer__name"><span data-fit>Let’s connect.</span></p>
   </footer>
 
-  <script src="../js/main.js?v=20261018t"></script>
+  <script src="../js/main.js?v=20261121k"></script>
 </body>
 </html>

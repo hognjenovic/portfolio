@@ -69,16 +69,31 @@ function enableZoom() {
   const dialog = document.createElement("dialog");
   dialog.className = "zoom";
   dialog.setAttribute("aria-label", "Enlarged image");
-  dialog.innerHTML = '<button class="zoom__close" type="button" aria-label="Close">×</button><img class="zoom__img" alt="">';
+  dialog.innerHTML = '<button class="zoom__close" type="button" aria-label="Close">×</button><div class="zoom__frame"><img class="zoom__img" alt=""></div>';
   document.body.appendChild(dialog);
+  const frame = dialog.querySelector(".zoom__frame");
   const big = dialog.querySelector(".zoom__img");
+  let overlay = null;
+  // Size a copied live overlay (thinking animation) to the enlarged image: --u is one screen point
+  const fitOverlay = () => {
+    if (overlay) overlay.style.setProperty("--u", big.clientWidth / Number(overlay.dataset.w) + "px");
+  };
+  window.addEventListener("resize", fitOverlay);
 
   let opener = null;
   const open = (img) => {
     opener = img;
     big.src = img.currentSrc || img.src;
     big.alt = img.alt;
+    if (overlay) overlay.remove();
+    const live = img.closest(".live") && img.closest(".live").querySelector(".thinking-live");
+    overlay = live ? live.cloneNode(true) : null;
+    if (overlay) {
+      frame.appendChild(overlay);
+      if (big.complete) requestAnimationFrame(fitOverlay); else big.onload = fitOverlay;
+    }
     dialog.showModal();
+    requestAnimationFrame(fitOverlay);
     document.documentElement.classList.add("is-zoomed");
   };
   dialog.addEventListener("close", () => {
