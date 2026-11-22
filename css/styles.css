@@ -880,7 +880,7 @@ body.case { background: #fafaf8; }
 
 /* Device mock-up on white: no frame, centred, capped so the phones don't fill the screen */
 .screen--device { align-items: center; }
-.screen--device img { width: 100%; max-width: 760px; border: 0; mix-blend-mode: multiply; } /* white backdrop melts into the off-white page */
+.screen--device img { width: 100%; max-width: 760px; border: 0; border-radius: 0; background: none; } /* transparent mock-up on the page background */
 
 /* Desktop beside mobile in one card: each item grows in proportion to its image's width:height,
    so both screens end up exactly the same height (set per item with an inline flex value) */
